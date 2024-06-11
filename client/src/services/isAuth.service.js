@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const isAuth = axios.get("http://localhost:3000/berandaDev", {withCredentials: true})
+export const isAuth = axios.get("https://server-pi-orpin.vercel.app/berandaDev", {withCredentials: true})
     .then((res) => {
         console.log(res)
     })

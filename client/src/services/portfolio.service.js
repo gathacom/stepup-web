@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiUrl = "http://localhost:3000/api/portfolio"
+const apiUrl = "https://server-pi-orpin.vercel.app/api/portfolio"
 export const getPortfolios = async (callback) => {
     await axios.get(apiUrl)
     .then(res => {
