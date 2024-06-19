@@ -9,7 +9,7 @@ const menus = [
   {
     link: "/",
     name: "Beranda",
-    active: false,
+    active: true,
   },
   {
     link: "/about",
@@ -106,7 +106,7 @@ const Navbar = ({ user }) => {
     <nav className="top-0">
       <div
         className={`h-[60px] flex justify-between lg:justify-center lg:items-center w-full fixed bg-white
-        -top-1 z-50 text-dark lg:py-5 px-5 py-4 mt-3 shadow-md shadow-black/50 md:shadow-none`}
+        top-0 z-50 text-dark lg:py-5 px-5 py-4 shadow-md shadow-black/50 md:shadow-none`}
       >
         <div className="flex items-center justify-center lg:justify-around gap-1">
           <img src="../../images/logo.png" alt="" className="h-[50px]" />
@@ -216,7 +216,7 @@ const SmallContent = ({ user, handleLogout }) => {
             </>
           ) : (
             <>
-            {devMenus.map((menu) => (
+            {menus.map((menu) => (
             <Link key={menu.link} spy="true" smooth="true" to={menu.link}>
               <li
                 className={`my-4 py-3 hover:bg-primary hover:text-white rounded-md cursor-pointer ${

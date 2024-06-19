@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { FaArrowRight } from "react-icons/fa6";
 import NavBar from "../components/Fragments/Navbar";
 import Footer from "../components/Fragments/Footer";
 import SectionHead from "../components/Elements/SectionHead";
@@ -22,68 +23,38 @@ const Beranda = () => {
     {
       title: "Aplikasi Web",
       images: "./images/layanan-website.png",
-      value: "pembuatan dan pengelolaan aplikasi website",
+      value:
+        "Step Up Project adalah mitra terpercaya dalam pembuatan dan pengelolaan website. Developer kami siap mewujudkan ide Anda menjadi aplikasi yang fungsional, menarik, dan sesuai kebutuhan bisnis.",
       // classname: "ps-5",
     },
     {
-      title: "Artikel",
-      images: "./images/layanan-artikel.png",
-      value: "artikel yang informatif dan berkualitas",
+      title: "Edukasi IT",
+      images: "./images/layanan-edukasi.png",
+      value:
+        "Step Up Project menyediakan layanan edukasi IT, termasuk kursus, artikel, dan konten digital untuk mengembangkan keterampilan dan pengetahuan teknologi terupdate.",
       // classname: "ps-20",
-    },
-    {
-      title: "Konten Digital",
-      images: "/images/layanan-sosmed.png",
-      value: "konten sosial media yang  berkualitas",
-      // classname: "ps-5",
     },
   ];
   const portfolios = [
     {
       id: 1,
-      client: "Bank Central Indonesia",
-      title: "Website Arstitek Rumah",
-      image: "./images/portfolio-card-1.png",
+      title: "Mini Course UI UX #1",
+      desc: "24 - 25 Mei 2024",
+      image: "./images/Mini Course UIUX 1.png",
+      image2: "./images/Mini Course UIUX desc.png",
     },
     {
       id: 2,
-      client: "Warung Makan Kokoh",
-      title: "Website Catering",
-      image: "./images/portfolio-card-2.png",
-    },
-    {
-      id: 3,
-      client: "Bank Central Indonesia",
-      title: "Website Arstitek Rumah",
-      image: "./images/portfolio-card-1.png",
-    },
-    {
-      id: 4,
-      client: "Warung Makan Kokoh",
-      title: "Website Catering",
-      image: "./images/portfolio-card-2.png",
+      title: "ONE HOME",
+      desc: "SMA Negeri 2 Raha",
+      image: "./images/ONE HOME.png",
+      image2: "./images/ONE HOME desc.png",
     },
   ];
   const customers = [
     {
       id: 1,
-      image: "./images/pelanggan-1.png",
-    },
-    {
-      id: 2,
-      image: "./images/pelanggan-2.png",
-    },
-    {
-      id: 3,
-      image: "./images/pelanggan-3.png",
-    },
-    {
-      id: 4,
-      image: "./images/pelanggan-4.png",
-    },
-    {
-      id: 5,
-      image: "./images/pelanggan-5.png",
+      image: "./images/partner-1.png",
     },
   ];
   const testimonies = [
@@ -117,43 +88,50 @@ const Beranda = () => {
   ];
 
   return (
-    <div className="py-24">
+    <div className="py-16">
       <NavBar user={user} />
       <section className="h-auto md">
         <div className="md:flex md:flex-row md:ps-16 lg:ps-32 md:h-screen">
-          <div className="flex flex-col ps-2 md:pt-32 w-full">
-            <SectionHead classname="md:text-start md:text-3xl">
-              Step Up Project
-            </SectionHead>
-            <h3 className="w-full text-2xl font-bold mt-5 md:text-[52px] lg:text-[64px] lg:mb-6 md:flex md:flex-col md:gap-8 lg:gap-2 lg:flex-row">
-              Step Up <span className="text-primary">Code Up.</span>
-            </h3>
-            <p className="mt-6 pe-11 md:w-10/12">
-              Step Up Project hadir sebagai digitalisasi bisnis, pengembangan
-              dan pengelolaan aplikasi web, dan juga sebagai edukasi seputar
-              dunia IT
+          <div className="flex flex-col items-center ps-2 pt-16 md:pt-32 w-full h-[503px] bg-gradient-to-t from-[#FFEDC6]">
+            <SectionHead
+              classname="md:text-start md:text-3xl"
+              content={[
+                {
+                  title: "Solusi dan Edukasi IT Terdepan Bersama ",
+                  classname: "",
+                },
+                { title: "Step Up.", classname: "text-primary" },
+              ]}
+            />
+            <p className="mt-6 w-[311px] md:w-10/12 text-sm text-center px-4">
+              Step Up Project hadir sebagai digitalisasi bisnis dan organisasi
+              dengan pengembangan dan pengelolaan website. Kami juga hadir
+              sebagai pionir terdepan edukasi seputar dunia IT.
             </p>
-            <button className="w-[148px] h-[40px] text-sm font-normal mt-10 text-white bg-primary rounded-full transition hover:shadow-lg hover:shadow-primary/50 hover:bg-gradient-to-l from-primary to-[#2B3087] duration-300">
-              Konsultasi Sekarang
+            <button className="flex flex-row justify-center gap-4 items-center w-[190px] h-[50px] text-sm font-normal mt-8 text-white bg-primary rounded-full">
+              Konsultasi{" "}
+              <span className="p-1 rounded-full bg-slate-200/50">
+                <FaArrowRight />
+              </span>
             </button>
-          </div>
-          <div className="w-full md:w-full lg:w-[90%] h-auto me-20 mb-[53px] bg-[url('./images/vector-2.png')] md:bg-[url('./images/vector-2-lg.png')] bg-contain md:scale-90 bg-no-repeat mt-10 md:mt-52 lg:mt-28 relative ">
-            <img
-              src="./images/mockup-5.png"
-              className="w-full h-auto m-auto md:scale-125 lg:scale-75 lg:-mt-16"
-              alt=""
-            />
-            <img
-              src="./images/frame-footer-2.png"
-              className="m-auto -top-36 right-28 scale-125 transition ease-in-out hidden md:block absolute"
-              alt=""
-            />
           </div>
         </div>
       </section>
       <section className="h-auto">
-        <div className="w-full ps-4 md:px-4 bg-[#f8f8f8] py-8">
-          <SectionHead>Layanan Kami</SectionHead>
+        <div className="w-full ps-4 md:px-4 bg-light mt-48 pb-8">
+          <SectionHead
+            subsec={true}
+            classname="md:text-start md:text-3xl"
+            content={[
+              { title: "Solusi ", classname: "text-primary" },
+              {
+                title: "Digital yang ",
+                classname: "",
+              },
+              { title: "Terbaik ", classname: "text-primary" },
+              { title: "untuk Anda", classname: "" },
+            ]}
+          />
           <div className="flex flex-col md:col-span-2 lg:flex-row md:gap-14 md:ps-32 md:w-11/12 md:items-center md:justify-center items-center mt-7">
             {services.map((service) => (
               <CardLayanan key={service.title} {...service}></CardLayanan>
@@ -161,10 +139,28 @@ const Beranda = () => {
           </div>
         </div>
       </section>
-      <section className="h-auto pb-16 md:pb-24">
-        <div className="w-full px-6 py-8">
-          <SectionHead>Portfolio</SectionHead>
-          <div className="mt-7 flex flex-col md:grid md:grid-cols-2 md:place-items-center lg:flex lg:flex-row lg:grid-cols-none md:justify-center flex-wrap gap-[70px] md:gap-x-12 md:gap-y-32 lg:gap-36 md:mt-16 items-center">
+      <section className="h-auto md:pb-24">
+        <div className="w-full ps-6 py-8 bg-gradient-to-l from-[#FFEDC6]">
+          <div className="flex flex-col md:col-span-2 lg:flex-row md:gap-14 md:ps-32 md:w-11/12 md:items-center md:justify-center items-center">
+            <SectionHead
+              subsec={true}
+              classname="md:text-start md:text-3xl"
+              content={[
+                { title: "Solusi ", classname: "text-primary" },
+                {
+                  title: "Kami yang Dengan Senang Kami Tunjukkan Kepada Anda ",
+                  classname: "",
+                },
+              ]}
+            />
+            <button className="flex flex-row justify-center gap-4 items-center w-[190px] h-[50px] text-sm font-normal mt-8 text-white bg-primary rounded-full">
+              Selengkapnya{" "}
+              <span className="p-1 rounded-full bg-slate-200/50">
+                <FaArrowRight />
+              </span>
+            </button>
+          </div>
+          <div className="mt-8">
             {portfolios.map((item) => (
               <Portfolio key={item.id} {...item}></Portfolio>
             ))}
@@ -172,9 +168,18 @@ const Beranda = () => {
         </div>
       </section>
       <section className="h-auto">
-        <div className="w-full ps-4 py-8 bg-slate-100">
-          <SectionHead>Pelanggan Kami</SectionHead>
-          <div className="w-full flex justify-center items-center gap-4 overflow-x-scroll">
+        <div className="w-full ps-4 py-8 bg-light">
+          <SectionHead
+            subsec={true}
+            content={[
+              { title: "Partner ", classname: "text-primary" },
+              {
+                title: "Kami dalam Kesuksesan Digital",
+                classname: "",
+              },
+            ]}
+          />
+          <div className="w-full flex justify-center items-center mt-8 gap-4 overflow-x-scroll">
             {customers.map((item) => (
               <img key={item.id} src={item.image} alt="" />
             ))}
@@ -182,9 +187,17 @@ const Beranda = () => {
         </div>
       </section>
       <section className="h-auto">
-        <div className="w-full ps-4 pt-8 pb-12 bg-white">
-          <SectionHead>Testimoni</SectionHead>
-          <div className="flex flex-row items-center justify-start gap-4 overflow-x-scroll">
+        <div className="w-full ps-6 pb-9 bg-light">
+          <SectionHead
+            subsec={true}
+            content={[
+              {
+                title: "Dukungan dan Kepercayaan Pelanggan",
+                classname: "",
+              },
+            ]}
+          />
+          <div className="flex flex-row w-[320px] items-center justify-start gap-4 overflow-x-scroll mt-9">
             {testimonies.map((item) => (
               <ReviewCard key={item.id} {...item}></ReviewCard>
             ))}
@@ -193,16 +206,25 @@ const Beranda = () => {
       </section>
 
       <section className="h-auto">
-        <div className="w-full ps-4 pt-14 pb-12 bg-white">
-          <SectionHead>Tim Kami</SectionHead>
-          <div className="grid grid-cols-2 md:grid-cols-3 place-items-center gap-6 mt-6">
+        <div className="w-full px-2 pt-4 pb-12 bg-white">
+        <SectionHead
+            subsec={true}
+            content={[
+              { title: "Tim ", classname: "text-primary" },
+              {
+                title: "Kami yang Luar Biasa",
+                classname: "",
+              },
+            ]}
+          />
+          <div className="grid grid-cols-2 md:grid-cols-3 place-items-center mt-10">
             {teams.map((item) => (
               <TeamCard key={item.id} {...item}></TeamCard>
             ))}
           </div>
         </div>
       </section>
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 };
@@ -210,53 +232,54 @@ const Beranda = () => {
 const CardLayanan = (props) => {
   const { title, images, classname, value } = props;
 
-  CardLayanan.propTypes = {
-    title: PropTypes.string,
-    images: PropTypes.string,
-    classname: PropTypes.string,
-  };
-
   return (
-    <div className={`flex justify-center items-center w-[75%]`}>
-      <div className="flex flex-col pe-5 h-[216px] w-full ps-9 pt-8 rounded-2xl mb-8 border-b-4 border-primary shadow-lg shadow-slate-400 hover:shadow-xl hover:shadow-primary/75 transition-all duration-700">
-        <img src={images} alt={title} className="w-[45px] h-[45px] mb-3" />
+    <div
+      className={`flex justify-center items-center w-[312px] h-[205px] mt-16`}
+    >
+      <div className="flex flex-col items-center h-full w-full px-5 pt-12 rounded-2xl mb-8 border-[1px] border-slate-300 relative">
+        <img
+          src={images}
+          alt={title}
+          className="w-[66px] h-[66px] mb-3 absolute left-[50%] -top-8 translate-x-[-50%]"
+        />
         <h3 className="text-lg font-bold mb-3">{title}</h3>
-        <p className="text-sm">{value}</p>
+        <p className="text-sm text-center">{value}</p>
       </div>
     </div>
   );
 };
 const Portfolio = (props) => {
-  const { client, title, image } = props;
+  const { desc, title, image, image2 } = props;
   return (
-    <div className="flex flex-col px-5 pt-4 relative shadow-lg shadow-slate-400 md:max-w-[312px] h-[216px] lg:scale-110 rounded-lg">
-      <h2 className="text-sm font-semibold">{client}</h2>
-      <h1 className="text-lg font-bold">{title}</h1>
-      <div className="relative bottom-0 px-5 w-[267px] h-[182px]">
+    <div className="flex flex-col mt-5">
+      <div className="relative">
+        <img src={image} alt="mockup" className="" />
         <img
-          src={image}
+          src={image2}
           alt="mockup"
-          className="w-full absolute -right-0.5 top-4"
+          className="w-[100px] h-[100px] absolute bottom-5 right-9"
         />
       </div>
+      <h2 className="text-xs font-semibold text-slate-400 mt-1">{desc}</h2>
+      <h1 className="text-base font-semibold">{title}</h1>
     </div>
   );
 };
 const ReviewCard = ({ image, reviewer, review, longReview }) => {
   return (
-    <div
-      className="mx-auto mt-6 ps-6 bg-white min-w-[319px] md:min-w-[700px] lg:min-w-[1087px] h-[168px] md:h-[342px] md:w-[75%] rounded-xl border-2 border-slate-500 relative 
-      drop-shadow-[2px_17px_10px_rgba(0,172,193,0.4)] "
-    >
-      <div className="flex flex-row items-center w-full h-full py-4">
-        <img src={image} alt="" className="h-20 w-20 md:h-40 md:w-40" />
-        <div className="flex flex-col ps-4">
-          <p className="md:h-[50%] pe-1 md:pe-5 text-xs md:text-lg text-pale mb-3 overflow-y-hidden">
-            {review}
-            <span className="hidden md:block lg:hidden">{longReview.slice(0, 100)}...</span>
-            <span className="hidden lg:block">{longReview.slice(0, 200)}...</span>
-          </p>
-            <p className="text-sm md:text-2xl font-bold">{reviewer}</p>
+    <div className="bg-white min-w-[233px] h-[264px] rounded-2xl border-2 border-slate-300">
+      <div className="flex flex-col px-5 pt-5">
+        <img src="./images/quotation.png" alt="" className="h-4 w-4" />
+        <p className="h-[122px] md:h-[50%] pe-1 md:pe-5 text-xs md:text-lg text-dark mb-3 overflow-y-hidden mt-4 text-justify">
+          {review}
+        </p>
+        <div className="flex items-center gap-2 mt-4 ">
+          <img
+            src={image}
+            alt=""
+            className="h-[39px] w-[39px] md:h-40 md:w-40"
+          />
+          <p className="text-sm md:text-2xl font-bold">{reviewer}</p>
         </div>
       </div>
     </div>
