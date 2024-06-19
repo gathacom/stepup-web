@@ -1,0 +1,16 @@
+[{
+  "_id": {
+    "$oid": "65f80e3d3ce9a36771312cd1"
+  },
+  "email": "yoga@gmail.com",
+  "password": "$2b$10$Ppv7Jx0ZCO8wivtKii6.m.LvnkxFSua5IM00yLWT0n6FhBtsw00l6",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "662ab27bacb597fbe74643e1"
+  },
+  "email": "gatha@gmail.com",
+  "password": "$2b$10$YzY.kLnmqxwkD.HMKH6CV.QBQdzcVUrb5Z1Et3MSkykOHlBR.eeG.",
+  "__v": 0
+}]
