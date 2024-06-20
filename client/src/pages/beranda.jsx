@@ -88,7 +88,7 @@ const Beranda = () => {
   ];
 
   return (
-    <div className="py-16">
+    <div className="pt-16">
       <NavBar user={user} />
       <section className="h-auto md">
         <div className="md:flex md:flex-row md:ps-16 lg:ps-32 md:h-screen">

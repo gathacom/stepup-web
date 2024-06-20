@@ -7,6 +7,9 @@
   .labelArticle {
     @apply text-dark font-bold my-2
   }
+  .bg-head {
+    @apply bg-gradient-to-bl from-primary/50 from-15% via-white to-white
+  }
 }
 @layer utilities {
   /* Hide scrollbar for Chrome, Safari and Opera */
