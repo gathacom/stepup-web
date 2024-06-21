@@ -14,7 +14,7 @@ import {
   getLatestArticle,
 } from "../services/article.service";
 import SectionHead from "../components/Elements/SectionHead";
-import SearchArticle from "../components/Elements/Input/SearchArticle";
+import InputWithIcon from "../components/Elements/Input/InputWithIcon";
 
 const Artikel = () => {
   const [articles, setArticles] = useState([]);
@@ -85,7 +85,7 @@ const Artikel = () => {
       )}
       <section className="h-auto">
         <div className="pt-8 px-6">
-          <SearchArticle />
+          <InputWithIcon />
           <div className="md:grid md:grid-cols-3 md:gap-4">
             {articles.map((article, index) => (
               <CardArtikel key={ids[index]} id={ids[index]} {...article} />
