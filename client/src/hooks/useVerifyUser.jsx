@@ -13,7 +13,7 @@ const useVerifyUser = () => {
       if (cookies.jwt) {
         try {
           const { data } = await axios.post(
-            `http://localhost:3000/`,
+            `https://stepup-server.vercel.app/`,
             {},
             { withCredentials: true }
           );

@@ -4,7 +4,6 @@ const jwt = require("jsonwebtoken");
 const createToken = (id) => {
   return jwt.sign({id},"StepUp Projects",{
     expiresIn: 3 * 24 * 60 * 60,
-
   })
 }
 
