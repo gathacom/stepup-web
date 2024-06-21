@@ -4,7 +4,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
-const dotenv = require("dotenv")
+const dotenv = require("dotenv");
 const PORT = process.env.PORT || 8080;
 dotenv.config();
 
@@ -22,21 +22,20 @@ app.use(bodyParser.json());
 // const baseUrL = "http://localhost:5173"
 app.use(
   cors({
-  origin: ["*", "http://localhost:5173", "https://stepup-web.vercel.app"],
-  credentials: true,
-})
+    origin: ["*", "http://localhost:5173", "https://stepup-web.vercel.app","https://stepup-project.vercel.app"],
+    credentials: true,
+  })
 );
-  
+
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.static("assets"));
 
-
 // route
-app.get("/", (req, res)=>{
-  res.send("server is running")
+app.get("/", (req, res) => {
+  res.send("server is running");
 });
 
 app.use("/", require("./routes/auth"));

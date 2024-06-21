@@ -5,7 +5,7 @@ import Button from "../Elements/Button/Button";
 import { ToastContainer, toast } from "react-toastify";
 
 const FormKonsul = () => {
-  const handleAddQuestion = (event) => {
+  const handleAddKonsul = (event) => {
     event.preventDefault();
     const data = {
       name: event.target.fullname.value,
@@ -19,7 +19,7 @@ const FormKonsul = () => {
         generateError(res.message);
       }
     });
-  };
+  }
   const generateError = (error) => {
     toast.error(error, {
       position: "bottom-right",
@@ -29,10 +29,10 @@ const FormKonsul = () => {
     toast.success(success, {
       position: "bottom-right",
     });
-  };
+  }
   return (
     <>
-      <form action={handleAddQuestion}>
+      <form onSubmit={handleAddKonsul}>
         <div className="flex flex-col gap-5 px-2.5">
           <InputWithIcon
             type="text"
