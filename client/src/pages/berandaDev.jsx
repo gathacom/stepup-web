@@ -12,6 +12,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import useVerifyUser from "../hooks/useVerifyUser";
 import StylizedFrame from "../components/Elements/StylizedFrame";
+import { teamLists } from "../data/teams";
 AOS.init();
 
 const BerandaDev = () => {
@@ -35,10 +36,8 @@ const BerandaDev = () => {
   // Ngambil data team card
   const [teams, setTeams] = useState([]);
   useEffect(() => {
-    getTeams((data) => {
-      setTeams(data);
-    });
-  }, []);
+    setTeams(teamLists);
+  }, [teams]);
 
   // Filter tim berdasarkan email pengguna
   const userTeam = teams.find((team) => team.email === user);
