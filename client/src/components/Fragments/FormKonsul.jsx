@@ -2,6 +2,7 @@ import React from "react";
 import { konsultasi } from "../../services/konsultasi.service";
 import InputWithIcon from "../Elements/Input/InputWithIcon";
 import Button from "../Elements/Button/Button";
+import { ToastContainer, toast } from "react-toastify";
 
 const FormKonsul = () => {
   const handleAddQuestion = (event) => {
@@ -19,17 +20,29 @@ const FormKonsul = () => {
       }
     });
   };
+  const generateError = (error) => {
+    toast.error(error, {
+      position: "bottom-right",
+    });
+  };
+  const generateSuccess = (success) => {
+    toast.success(success, {
+      position: "bottom-right",
+    });
+  };
   return (
     <>
       <form action={handleAddQuestion}>
         <div className="flex flex-col gap-5 px-2.5">
           <InputWithIcon
+            type="text"
             icon="user"
             placeholder="Full Name"
             name="fullname"
             id="fullname"
           />
           <InputWithIcon
+            type="email"
             icon="mail"
             placeholder="Email"
             name="email"
@@ -51,6 +64,7 @@ const FormKonsul = () => {
           </Button>
         </div>
       </form>
+      <ToastContainer />
     </>
   );
 };
