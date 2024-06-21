@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiUrl = "https://server-pi-orpin.vercel.app/api/teams"
+const apiUrl = "https://stepup-server.vercel.app/api/teams"
 export const getTeams = async (callback) => {
     await axios.get(apiUrl)
     .then(res => {

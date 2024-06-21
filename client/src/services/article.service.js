@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL_API = "https://server-pi-orpin.vercel.app/article";
+const URL_API = "https://stepup-server.vercel.app/article";
 
 export const article = async (data, callback) => {
   await axios
