@@ -1,42 +1,28 @@
-import PropTypes from "prop-types";
+import ShowPoint from "./ShowPoint";
 
-const CardLayanan = ({ image, title, content }) => {
-  CardLayanan.propTypes = {
-    image: PropTypes.string,
-    title: PropTypes.string,
-    content: PropTypes.string,
-  };
+const CardLayanan = (props) => {
+  const { title, images, classname, value, points } = props;
 
   return (
-    <main
-      className="relative max-w-[267px] h-[290px] mx-auto mt-[43px] rounded-[10px] font-body overflow-hidden shadow-cardShadow box-border
-    md:max-w-[600px] md:h-[210px] md:flex md:justify-center lg:max-w-[1180px] lg:h-[280px]"
+    <div
+      className={`flex justify-center items-center w-[312px] mt-16`}
     >
-      <section className="md:flex md:gap-2 ">
-        <div className="md:flex md:items-center md:w-[30%] md:px-4 lg:w-[20%]">
-          <img
-            src={image}
-            alt="Cards"
-            className="w-[57px] mx-auto mt-[26px] md:w-[100px] lg:w-[150px]"
-          />
+      <div className="flex flex-col pb-12 items-center h-full w-full px-4 pt-12 rounded-2xl mb-8 border-[1px] border-slate-300 relative">
+        <img
+          src={images}
+          alt={title}
+          className="w-[66px] h-[66px] mb-3 absolute left-[50%] -top-8 translate-x-[-50%]"
+        />
+        <h3 className="text-lg font-bold mb-3">{title}</h3>
+        <p className="text-sm text-center">{value}</p>
+        <div className="w-full flex flex-col items-start justify-start gap-2 mt-8 px-4">
+          {points.map((point, index) => (
+            <ShowPoint key={index} point={point} />
+          ))}
         </div>
-        <div className="md:w-[70%] md:pr-8 lg:w-[80%] lg:pe-36">
-          <h1
-            className="text-[16px] font-bold text-center mb-5 mt-[14px] md:text-left md:mb-2 md:ps-3 md:mt-10 
-          lg:text-3xl lg:mb-3 lg:mt-20"
-          >
-            {title}
-          </h1>
-          <p className="word-wrap px-[13px] text-justify text-xs lg:text-base">
-            {content}
-          </p>
-        </div>
-      </section>
-      <div
-        className="absolute bottom-0 w-full border border-[#FFB10A]
-      md:w-[267px] md:mx-auto"
-      ></div>
-    </main>
+        
+      </div>
+    </div>
   );
 };
 

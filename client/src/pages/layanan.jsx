@@ -1,61 +1,72 @@
 import NavBar from "../components/Fragments/Navbar";
 import Footer from "../components/Fragments/Footer";
 import CardLayanan from "../components/Fragments/CardLayanan";
-import StylizedFrame from "../components/Elements/StylizedFrame";
+import SectionHead from "../components/Elements/SectionHead";
 import useVerifyUser from "../hooks/useVerifyUser";
+import FloatWhatsapp from "../components/Fragments/FloatWhatsapp";
 
 const Layanan = () => {
   const user = useVerifyUser();
   const services = [
     {
-      id: 1,
-      image: "./images/layanan-website.png",
       title: "Aplikasi Web",
-      content:
-        "Step Up Project mitra terpercaya dalam pembuatan dan pengelolaan aplikasi website, dengan developer yang siap membantu mewujudkan ide anda menjadi aplikasi website yang fungsional, menarik, dan sesuai dengan kebutuhan bisnis Anda",
+      images: "../../../images/layanan-website.png",
+      value:
+        "Step Up Project adalah mitra terpercaya dalam pembuatan dan pengelolaan website. Developer kami siap mewujudkan ide Anda menjadi aplikasi yang fungsional, menarik, dan sesuai kebutuhan bisnis.",
+      points: [
+        "Konsultasi secara gratis",
+        "Desain & Fitur yang inovatif",
+        "User Friendly & Responsive",
+        "SEO Friendly",
+        "Termasuk Domain ( .com / .id )",
+        "Hosting yang aman dan cepat",
+        "3 bulan pemeliharaan website",
+        "Garansi 6 bulan",
+      ],
     },
     {
-      id: 2,
-      image: "./images/layanan-artikel.png",
-      title: "Artikel",
-      content:
-        "Kami juga menyediakan layanan artikel yang informatif dan berkualitas untuk mendukung keberhasilan online Anda. Mari bersama, ciptakan kehadiran online yang tak terlupakan dan sukses",
-    },
-    {
-      id: 3,
-      image: "./images/layanan-sosmed.png",
-      title: "Konten Digital",
-      content:
-        "Tidak hanya itu, kami juga spesialis dalam pembuatan konten digital. Konten berkualitas tinggi untuk memperkuat kehadiran online Anda. Mari tingkatkan kualitas dan daya tarik bisnis Anda bersama kami",
+      title: "Edukasi IT",
+      images: "../../../images/layanan-edukasi.png",
+      value:
+        "Step Up Project menyediakan layanan edukasi IT, termasuk kursus, artikel, dan konten digital untuk mengembangkan keterampilan dan pengetahuan teknologi terupdate.",
+      points: ["Mini Course", "Konten Digital", "Artikel"],
     },
   ];
   return (
-    <div className="relative pb-[550px] md:pb-[350px] lg:pb-[400px]">
-      <NavBar user={user}/>
-      {/* Style tambahan sesuai desain */}
-      <StylizedFrame
-        urlImage="../images/stylized-frame-1-right.png"
-        classname="absolute right-0 top-[380px]"
-      ></StylizedFrame>
-      <h1 className="mt-[80px] text-2xl font-bold text-center md:mt-[140px] md:mb-[60px] lg:text-4xl">
-        Layanan Kami
-      </h1>
-      <p
-        className="mt-[30px] w-full text-xs font-body leading-4 text-black px-[12px] text-center
-      md:mb-[60px] lg:text-lg"
-      >
-        Hadirkan solusi digital untuk mendukung efisiensi dan produktivitas
-        bisnis. Sambut era digital bersama <br /> inovasi kami
-      </p>
+    <div className="relative ">
+      <NavBar user={user} />
+      <section className="mt-[62px] pt-14 pb-8 bg-head-tr-to-bl-20 px-4">
+        <SectionHead
+          classname="md:text-start md:text-3xl"
+          content={[
+            { title: "Solusi ", classname: "text-primary" },
+            {
+              title: "Digital Yang  ",
+              classname: "",
+            },
+            { title: "Terbaik ", classname: "text-primary" },
+            {
+              title: "Untuk Anda.",
+              classname: "",
+            },
+          ]}
+        />
+        <p
+          className="mt-[20px] w-full text-xs font-body leading-4 text-black px-[12px] text-center
+        md:mb-[60px] lg:text-lg"
+        >
+          Hadirkan solusi digital untuk mendukung efisiensi dan produktivitas
+          bisnis. Sambut era digital bersama inovasi kami
+        </p>
+      </section>
       {/* memanggil object services */}
-      {services.map((service) => (
-        <CardLayanan key={service.id} {...service} />
-      ))}
-      <StylizedFrame
-        urlImage="../images/stylized-frame-1-left.png"
-        classname="absolute left-0 bottom-[700px] md:bottom-[530px]"
-      ></StylizedFrame>
+      <div className="flex flex-col md:col-span-2 lg:flex-row md:gap-14 md:ps-32 md:w-11/12 md:items-center md:justify-center items-center mt-2">
+        {services.map((service) => (
+          <CardLayanan key={service.title} {...service}></CardLayanan>
+        ))}
+      </div>
       <Footer />
+      <FloatWhatsapp />
     </div>
   );
 };
