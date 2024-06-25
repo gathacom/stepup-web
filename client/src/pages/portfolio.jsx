@@ -5,6 +5,7 @@ import CardPortfolio from "../components/Fragments/CardPortfolio";
 import SectionHead from "../components/Elements/SectionHead";
 import useVerifyUser from "../hooks/useVerifyUser";
 import { websites, educations } from "../data/portfolio.js";
+import FloatWhatsapp from "../components/Fragments/FloatWhatsapp";
 
 const Portfolio = () => {
   const user = useVerifyUser();
@@ -87,6 +88,7 @@ const Portfolio = () => {
         </section>
       </main>
       <Footer />
+      <FloatWhatsapp/>
     </div>
   );
 };
