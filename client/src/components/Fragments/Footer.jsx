@@ -126,23 +126,6 @@ const Footer = () => {
           </div>
         </div>
       </section>
-      <section className="relative">
-        <img
-          className="absolute right-8 md:bottom-[16px] md:right-[14px] lg:bottom-[24px] lg:right-[18px]"
-          src="../images/frame-footer-2.png"
-          alt="frame-footer"
-        />
-        <img
-          className="w-full md:hidden"
-          src="../images/frame-footer.png"
-          alt="frame-footer"
-        />
-        <img
-          className="w-full md:block lg:h-[52px]"
-          src="../images/frame-footer-md.png"
-          alt="frame-footer-md"
-        />
-      </section>
     </footer>
   );
 };

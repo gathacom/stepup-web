@@ -3,12 +3,21 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
+@layer components {
   .labelArticle {
-    @apply text-dark font-bold my-2
+    @apply text-dark font-bold my-2;
   }
   .bg-head {
-    @apply bg-gradient-to-bl from-primary/50 from-15% via-white to-white
+    @apply bg-gradient-to-bl from-primary/50 from-15% via-white to-white;
+  }
+  .bg-head-tr-to-bl-20 {
+    @apply bg-gradient-to-bl from-primary/25 from-20% via-white to-white;
+  }
+  .bg-head-tl-to-br-10 {
+    @apply bg-gradient-to-br from-primary/10 from-10% via-white to-white;
+  }
+  .bg-head-tl-to-br-30 {
+    @apply bg-gradient-to-br from-primary/20 from-30% via-white to-white;
   }
 }
 @layer utilities {
@@ -23,5 +32,3 @@
     scrollbar-width: none; /* Firefox */
   }
 }
-
-

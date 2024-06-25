@@ -10,7 +10,7 @@ const TeamCard = (props) => {
   };
 
   return (
-    <div className=" w-[150px] h-[211px] border-2 border-slate-400 rounded-2xl mt-3 lg:w-[328px] lg:h-[452px]">
+    <div className=" w-[160px] h-[221px] border border-[#bfc5d1] rounded-2xl mt-3 lg:w-[328px] lg:h-[452px]">
       <img
         src={image}
         alt={`${name} Photo`}
