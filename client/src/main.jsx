@@ -5,7 +5,6 @@ import { createBrowserRouter, RouterProvider, useLocation } from 'react-router-d
 import { useNavigate } from 'react-router-dom'
 import axios from "axios";
 import Beranda from './pages/beranda'
-import Tentang from './pages/tentang'
 import Layanan from './pages/layanan'
 import Portfolio from './pages/portfolio'
 import Artikel from './pages/artikel'
@@ -19,66 +18,67 @@ import DashboardDev from './pages/berandaDev';
 import KonsultasiDev from './pages/konsultasiDev';
 import "react-toastify/dist/ReactToastify.css";
 import ArticleEdit from './pages/artikelEdit'
+import About from './pages/about'
 
 
 const router = createBrowserRouter([
   {
-    path:"/",
-    element: <Beranda/>,
+    path: "/",
+    element: <Beranda />,
   },
   {
-    path:"/about",
-    element: <Tentang/>,
+    path: "/about",
+    element: <About />,
   },
   {
-    path:"/services",
-    element: <Layanan/>,
+    path: "/services",
+    element: <Layanan />,
   },
   {
-    path:"/portfolio",
-    element: <Portfolio/>,
+    path: "/portfolio",
+    element: <Portfolio />,
   },
   {
-    path:"/article",
-    element: <Artikel/>,
+    path: "/article",
+    element: <Artikel />,
   },
   {
-    path:"/konsultasi",
-    element: <Konsultasi/>,
+    path: "/konsultasi",
+    element: <Konsultasi />,
   },
   {
-    path:"/portfolio/:id",
-    element: <PortfolioDetail/>,
+    path: "/portfolio/:id",
+    element: <PortfolioDetail />,
   },
   {
-    path:"/login",
-    element: <Login/>,
+    path: "/login",
+    element: <Login />,
   },
   {
-    path:"/developer/dashboard",
-    element: <BerandaDev/>,
+    path: "/developer/dashboard",
+    element: <BerandaDev />,
   },
   {
-    path:"/developer/article/create",
-    element: <ArticleDev/>,
+    path: "/developer/article/create",
+    element: <ArticleDev />,
   },
   {
-    path:"/article/:id",
-    element: <ArtikelDetail/>,
+    path: "/article/:id",
+    element: <ArtikelDetail />,
   },
   {
-    path:"/developer/article/edit/:id",
-    element: <ArticleEdit/>,
+    path: "/developer/article/edit/:id",
+    element: <ArticleEdit />,
   },
   {
-    path:"/developer/dashboard/:id",
-    element: <DashboardDev/>,
+    path: "/developer/dashboard/:id",
+    element: <DashboardDev />,
   },
   {
-    path:"/developer/konsultasi",
-    element: <KonsultasiDev/>,
+    path: "/developer/konsultasi",
+    element: <KonsultasiDev />,
   },
-])
+]);
 
 
 

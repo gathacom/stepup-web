@@ -38,7 +38,7 @@ export const teamLists = [
       id: 6,
       image: "../images/team-adit.jpg",
       name: "Muh Aditya Dwijaya",
-      role: "Creative",
+      role: "Medsos & Creative",
       email: "adityadwijaya@gmail.com",
     },
   ];
