@@ -15,6 +15,7 @@ import {
 } from "../services/article.service";
 import SectionHead from "../components/Elements/SectionHead";
 import InputWithIcon from "../components/Elements/Input/InputWithIcon";
+import FloatWhatsapp from "../components/Fragments/FloatWhatsapp";
 
 const Artikel = () => {
   const [articles, setArticles] = useState([]);
@@ -85,7 +86,13 @@ const Artikel = () => {
       )}
       <section className="h-auto">
         <div className="pt-8 px-6">
-          <InputWithIcon />
+        <InputWithIcon
+            type="text"
+            icon="search"
+            placeholder="Cari"
+            name="article"
+            id="article"
+          />
           <div className="md:grid md:grid-cols-3 md:gap-4">
             {articles.map((article, index) => (
               <CardArtikel key={ids[index]} id={ids[index]} {...article} />
@@ -110,6 +117,8 @@ const Artikel = () => {
       </h2> */}
 
       <Footer />
+      <FloatWhatsapp/>
+
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiUrl = "https://stepup-server.vercel.app/api/portfolio"
+const apiUrl = "http://localhost:8080/api/portfolio"
 export const getPortfolios = async (callback) => {
     await axios.get(apiUrl)
     .then(res => {

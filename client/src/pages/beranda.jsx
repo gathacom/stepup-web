@@ -9,6 +9,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import PropTypes from "prop-types";
 import useVerifyUser from "../hooks/useVerifyUser";
+import FloatWhatsapp from "../components/Fragments/FloatWhatsapp";
 
 AOS.init();
 
@@ -91,8 +92,8 @@ const Beranda = () => {
     <div className="pt-16">
       <NavBar user={user} />
       <section className="h-auto md">
-        <div className="md:flex md:flex-row md:ps-16 lg:ps-32 md:h-screen">
-          <div className="flex flex-col items-center ps-2 pt-16 md:pt-32 w-full h-[503px] bg-gradient-to-t from-[#FFEDC6]">
+        <div className="relative md:flex md:flex-row md:ps-16 lg:ps-32 md:h-screen">
+          <div className=" relative flex flex-col items-center pt-16 px-9 md:pt-32 w-full h-[503px] bg-gradient-to-t from-[#FFEDC6]">
             <SectionHead
               classname="md:text-start md:text-3xl"
               content={[
@@ -114,6 +115,9 @@ const Beranda = () => {
                 <FaArrowRight />
               </span>
             </button>
+            <div className="absolute px-6 -bottom-24">
+              <img src="./images/mockup-beranda.png" alt="" />
+            </div>
           </div>
         </div>
       </section>
@@ -140,7 +144,7 @@ const Beranda = () => {
         </div>
       </section>
       <section className="h-auto md:pb-24">
-        <div className="w-full ps-6 py-8 bg-gradient-to-l from-[#FFEDC6]">
+        <div className="w-full px-6 py-8 bg-gradient-to-l from-[#FFEDC6]">
           <div className="flex flex-col md:col-span-2 lg:flex-row md:gap-14 md:ps-32 md:w-11/12 md:items-center md:justify-center items-center">
             <SectionHead
               subsec={true}
@@ -168,7 +172,7 @@ const Beranda = () => {
         </div>
       </section>
       <section className="h-auto">
-        <div className="w-full ps-4 py-8 bg-light">
+        <div className="w-full px-4 py-8 bg-light">
           <SectionHead
             subsec={true}
             content={[
@@ -207,7 +211,7 @@ const Beranda = () => {
 
       <section className="h-auto">
         <div className="w-full px-2 pt-4 pb-12 bg-white">
-        <SectionHead
+          <SectionHead
             subsec={true}
             content={[
               { title: "Tim ", classname: "text-primary" },
@@ -225,6 +229,7 @@ const Beranda = () => {
         </div>
       </section>
       <Footer />
+      <FloatWhatsapp />
     </div>
   );
 };

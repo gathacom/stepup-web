@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL_API = "https://stepup-server.vercel.app/api/konsultasi";
+const URL_API = "http://localhost:8080/api/konsultasi";
 
 export const konsultasi = async (data, callback) => {
   await axios

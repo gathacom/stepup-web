@@ -14,11 +14,11 @@ const ArticleDev = () => {
   const [cookies, setCookie, removeCookie] = useCookies();
 
 
-  useEffect(() => {
-    if (!cookies.jwt) {
-      navigate("/login");
-    }
-  })
+  // useEffect(() => {
+  //   if (!cookies.jwt) {
+  //     navigate("/login");
+  //   }
+  // })
 
   const handleLogout = () => {
     removeCookie(["jwt"]);

@@ -6,6 +6,7 @@ import StylizedFrame from "../components/Elements/StylizedFrame";
 import useVerifyUser from "../hooks/useVerifyUser";
 import SectionHead from "../components/Elements/SectionHead";
 import FormKonsul from "../components/Fragments/FormKonsul";
+import FloatWhatsapp from "../components/Fragments/FloatWhatsapp";
 
 const Konsultasi = () => {
   const user = useVerifyUser();
@@ -33,22 +34,8 @@ const Konsultasi = () => {
           <FormKonsul></FormKonsul>
         </div>
       </section>
-      {/* <div className="relative pb-[550px] md:pb-[350px] lg:pb-[400px]">
-        <StylizedFrame
-          urlImage="../images/stylized-frame-2-right.png"
-          classname="hidden absolute right-[90px] top-[80px] md:block md:w-[100px] lg:w-[139px]"
-        ></StylizedFrame>
-          <div className="flex justify-center w-full px-4">
-            <div className="w-full p-2 lg:px-28">
-              <FormKonsultasi></FormKonsultasi>
-            </div>
-          </div>
-        <StylizedFrame
-          urlImage="../images/stylized-frame-3-left.png"
-          classname="hidden absolute left-0 bottom-[380px] md:block md:w-[50px] lg:w-[210px]"
-        ></StylizedFrame>
-      </div> */}
-      <Footer></Footer>
+      <Footer />
+      <FloatWhatsapp/>
     </div>
   );
 };

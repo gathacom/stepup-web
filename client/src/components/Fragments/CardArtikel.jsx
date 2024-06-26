@@ -14,7 +14,7 @@ const CardArtikel = ({ id, image, title, author, content, published_at }) => {
     const verifyUser = async () => {
       if (cookies.jwt) {
         const { data } = await axios.post(
-          `http://localhost:3000/`,
+          `http://localhost:8080/`,
           {},
           { withCredentials: true }
         );
@@ -40,9 +40,9 @@ const CardArtikel = ({ id, image, title, author, content, published_at }) => {
   return (
     <div className="block max-w-[300px] md:max-w-[409px] mx-auto mt-[43px] rounded-xl font-body overflow-hidden shadow-lg box-border">
       <img
-        src={`http://localhost:3000/article/${image}`}
+        src={`http://localhost:8080/article/${image}`}
         alt="Cards"
-        className="w-full h-[254px] object-cover"
+        className="w-full h-[254px] object-fit"
       />
       <div className="px-[14px] py-3 box-border leading-3">
         <div className="flex flex-row items-center">

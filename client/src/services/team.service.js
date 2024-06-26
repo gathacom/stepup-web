@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiUrl = "https://stepup-server.vercel.app/api/teams"
+const apiUrl = "http://localhost:8080/api/teams"
 export const getTeams = async (callback) => {
     await axios.get(apiUrl)
     .then(res => {
