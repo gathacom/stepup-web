@@ -190,7 +190,6 @@ const Value = ({ value }) => {
   Value.propTypes = {
     value: PropTypes.string.isRequired,
   };
-
   return (
     <div className="flex flex-row gap-3 lg:justify-start lg:items-start  ">
       <img src="./svg/tick.svg" alt="" className="lg:mt-2" />
