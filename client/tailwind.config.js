@@ -24,6 +24,7 @@ export default {
       boxShadow: {
         cardShadow: "0 5px 16px 0 rgba(0, 0, 0, 0.15)",
         buttonShadow: "0 4px 4px 0 rgba(0, 0, 0, 0.25)",
+        navbarShadow:"0 4px 4px 0 rgba(0, 0, 0, 0.1)",
       },
       borderRadius: {
         customRounded: "52% 48% 48% 52% / 50% 54% 46% 50% ",
