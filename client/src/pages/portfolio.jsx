@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import NavBar from "../components/Fragments/Navbar";
 import Footer from "../components/Fragments/Footer";
 import CardPortfolio from "../components/Fragments/CardPortfolio";
@@ -21,6 +21,10 @@ const Portfolio = () => {
   };
 
   const dataToDisplay = selectedCategory === "websites" ? websites : educations;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="relative">
