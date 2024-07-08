@@ -57,7 +57,7 @@ const About = () => {
                 to="teams"
                 spy={true}
                 smooth={true}
-                offset={-40}
+                offset={-180}
                 duration={500}
               >
                 <button className="flex flex-row mb-[60px] justify-center mx-auto gap-4 items-center w-[190px] h-[50px] text-sm font-normal mt-8 text-white bg-primary rounded-full lg:text-xl lg:w-[210px]">
@@ -70,24 +70,24 @@ const About = () => {
             </div>
           </section>
           <article className="md:mb-10">
-            <div className="md:px-28 md:leading-10 lg:px-80 lg:leading-[55px]">
+            <div className="md:px-36 md:leading-10 lg:px-[450px] lg:leading-[40px]">
               <SectionHead
                 classname="md:text-start md:text-3xl"
                 content={[
                   {
                     title: "Misi Kami adalah Mendukung ",
                     classname:
-                      "font-semibold text-lg md:text-[28px] lg:text-[32px]",
+                      "font-semibold text-lg md:text-[24px] lg:text-[28px]",
                   },
                   {
                     title: "Kemajuan Digital ",
                     classname:
-                      "text-primary font-semibold text-lg md:text-[28px] lg:text-[32px]",
+                      "text-primary font-semibold text-lg md:text-[24px] lg:text-[28px]",
                   },
                   {
                     title: "Anda.",
                     classname:
-                      "font-semibold text-lg md:text-[28px] lg:text-[32px]",
+                      "font-semibold text-lg md:text-[24px] lg:text-[28px]",
                   },
                 ]}
               />
@@ -125,12 +125,12 @@ const About = () => {
                   {
                     title: "Nilai ",
                     classname:
-                      "text-primary font-semibold text-lg md:text-[28px] lg:text-[32px] ",
+                      "text-primary font-semibold text-lg md:text-[24px] lg:text-[28px] ",
                   },
                   {
                     title: "Yang Kami Terapkan",
                     classname:
-                      "font-semibold text-lg md:text-[28px] lg:text-[32px]",
+                      "font-semibold text-lg md:text-[24px] lg:text-[28px]",
                   },
                 ]}
               />
@@ -162,16 +162,19 @@ const About = () => {
                   {
                     title: "Tim ",
                     classname:
-                      "text-primary font-semibold text-lg md:text-[28px] lg:text-[32px] ",
+                      "text-primary font-semibold text-lg md:text-[24px] lg:text-[28px] ",
                   },
                   {
                     title: "Kami yang Luar Biasa",
                     classname:
-                      "font-semibold text-lg md:text-[28px] lg:text-[32px] ",
+                      "font-semibold text-lg md:text-[24px] lg:text-[28px] ",
                   },
                 ]}
               />
-              <div className="grid grid-cols-2 md:grid-cols-3 place-items-center mt-6">
+              <div
+                className="grid grid-cols-2 md:grid-cols-3 place-items-center mt-6 md:gap-y-10 md:gap-x-0 md:px-10 lg:gap-y-20 lg:px-16"
+                id="teams"
+              >
                 {teamLists.map((item) => (
                   <TeamCard key={item.id} {...item}></TeamCard>
                 ))}

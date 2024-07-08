@@ -51,21 +51,29 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="w-full flex flex-col mt-20 text-dark font-body ">
-      <div className="flex justify-center items-center bg-[#151411] relative h-[184px] px-8">
-        <p className="text-white font-bold text-lg text-center">
+    <footer className="w-full flex flex-col mt-20 text-dark font-body  ">
+      <div className="flex justify-center items-center bg-[#151411] relative h-[184px] px-8 lg:py-[120px]">
+        <p
+          className="text-white font-semibold text-lg text-center md:text-[24px] md:px-20 md:leading-[40px]
+        lg:text-[30px] lg:px-80 lg:leading-[50px]"
+        >
           Transformasi digital Anda dengan pengembangan web dan edukasi IT kami.
         </p>
         <img
           src="./images/footer-vector1.png"
           alt=""
-          className="absolute bottom-0 h-16 w-full"
+          className="hidden absolute bottom-0 h-16 w-full md:block"
+        />
+        <img
+          src="./images/footer-vector2.png"
+          alt=""
+          className="absolute bottom-0 h-16 w-full md:hidden"
         />
       </div>
-      <section className="px-6 py-2 mb-2 md:px-20 bg-light md:flex md:justify-between lg:px-36">
+      <section className="px-6 py-2 mb-2  bg-light md:flex md:justify-between md:py-[50px] md:px-28  lg:px-40 lg:pt-[60px] lg:pb-[100px] border border-yellow-500">
         {/* Bagian logo ddan button konsultasi */}
-        <div className="flex flex-col justify-center items-center">
-          <div className="flex flex-row items-center gap-3 mt-6">
+        <div className="flex flex-col justify-center items-center lg:flex-row lg:justify-between  lg:pe-24 lg:items-start lg:w-full ">
+          <div className="flex flex-row items-center gap-3 mt-6 lg:mt-0">
             <img
               src="../../../images/logo.png"
               alt=""
@@ -73,8 +81,8 @@ const Footer = () => {
             />
             <h3 className="text-xl font-bold lg:text-[30px]">Step Up</h3>
           </div>
-          <div className="w-[230px] mt-4 lg:w-[300px]">
-            <p className="text-xs text-center">
+          <div className="w-[230px] mt-4 lg:w-[420px]">
+            <p className="text-xs text-center lg:text-left lg:text-base">
               Kami percaya pada talenta untuk menciptakan solusi digital
               unggulan. Dengan tim pengembang terampil, kami realisasikan ide
               Anda. Juga, kami tawarkan layanan edukasi IT untuk perkembangan
@@ -82,45 +90,20 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        {/* bagian navigasi */}
-        <div className="hidden md:block mt-4">
-          <div className="flex flex-col">
-            <div className="flex mb-[5px]">
-              <h4 className="text-base font-medium place-items-center">
-                Navigation
-              </h4>
-            </div>
-            <img
-              src="../svg/curly-style.svg"
-              alt="curly style gajelas"
-              className="w-8 mb-[9px]"
-            />
-            {navigation.map((nav) => (
-              <div
-                key={nav.title}
-                className="flex flex-row gap-1 items-center mb-2 "
-              >
-                <img
-                  src="../../../svg/arrow-right.svg"
-                  alt="arrow"
-                  className="w-2"
-                />
-                <Link to={nav.link} className=" text-xs text-start">
-                  {nav.title}
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
         {/* bagian information */}
         <div className="flex items-center justify-center mt-4">
           <div className="flex flex-col">
             {contacts.map((item) => (
-              <div key={item.title} className="flex flex-row items-center mb-2 mt-2 gap-2">
-                <div className="flex w-6 h-4 justify-left items-center fill-primary">
-                  <img src={item.image} alt={item.title} />
+              <div
+                key={item.title}
+                className="flex flex-row items-center mb-2 mt-2 gap-2 lg:gap-3"
+              >
+                <div className="flex w-6 h-4 justify-center items-center bg-primary lg:w-10 lg:h-10 lg:rounded-full">
+                  <img src={item.image} alt={item.title} className="lg:w-10" />
                 </div>
-                <p className="text-xs text-start">{item.content}</p>
+                <p className="text-xs text-start lg:text-base">
+                  {item.content}
+                </p>
               </div>
             ))}
           </div>

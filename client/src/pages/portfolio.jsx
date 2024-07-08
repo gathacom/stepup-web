@@ -25,21 +25,23 @@ const Portfolio = () => {
   return (
     <div className="relative">
       <NavBar user={user} />
-      <main className="box-border md:px-20 ">
-        <section className="mt-[62px] pt-14 pb-8 bg-head-tr-to-bl-20 px-5">
-          <SectionHead
-            classname="md:text-start md:text-3xl"
-            content={[
-              { title: "Solusi ", classname: "text-primary" },
-              {
-                title: "Kami yang Dengan Senang Kami Tunjukkan Kepada Anda  ",
-                classname: "",
-              },
-            ]}
-          />
+      <main className="box-border ">
+        <section className="mt-[62px] pt-14 pb-8 bg-head-tr-to-bl-20 px-5 lg:pt-20 ">
+          <div className="md:px-28 lg:px-[400px]">
+            <SectionHead
+              classname="md:text-start md:text-3xl"
+              content={[
+                { title: "Solusi ", classname: "text-primary" },
+                {
+                  title: "Kami yang Dengan Senang Kami Tunjukkan Kepada Anda  ",
+                  classname: "",
+                },
+              ]}
+            />
+          </div>
           <p
             className="mt-[20px] w-full text-xs font-body leading-4 text-black px-[2px] text-center
-        md:mb-[60px] lg:text-lg"
+        md:mb-[60px] md:text-base md:px-20 md:mt-[28px]   lg:text-xl lg:px-[320px] lg:mt-[32px] "
           >
             Jelajahi portofolio inovatif kami, solusi digital untuk efisiensi
             bisnis dan produktivitas maksimal. Sambut era digital dengan inovasi
@@ -47,10 +49,10 @@ const Portfolio = () => {
           </p>
         </section>
         <section>
-          <div className="flex justify-center">
+          <div className="flex justify-center ">
             <button
               onClick={() => handleCategoryChange("websites")}
-              className={`px-4 py-2 text-sm border-[2px] transition-colors duration-300 ${
+              className={`px-4 py-2 text-sm border-[2px] transition-colors duration-300 lg:px-8 lg:text-base ${
                 selectedCategory === "websites"
                   ? "text-yellow-500 border-b-yellow-500"
                   : "text-black border-b-[#F1F1F1]"
@@ -60,7 +62,7 @@ const Portfolio = () => {
             </button>
             <button
               onClick={() => handleCategoryChange("educations")}
-              className={`px-4 py-2 text-sm border-[2px] transition-colors duration-300 ${
+              className={`px-4 py-2 text-sm border-[2px] transition-colors duration-300 lg:px-8 lg:text-base ${
                 selectedCategory === "educations"
                   ? "text-yellow-500 border-b-yellow-500"
                   : "text-black border-b-[#F1F1F1]"
@@ -70,7 +72,8 @@ const Portfolio = () => {
             </button>
           </div>
           <div
-            className={`pl-6 md:relative md:z-30 md:grid md:grid-cols-2 md:gap-4 md:gap-y-0 lg:grid-cols-3 lg:gap-y-4 transition-all duration-300 
+            className={`pl-6 md:relative md:z-30 md:grid md:grid-cols-2 md:gap-4 transition-all duration-300 
+             md:pl-10 md:pr-10 lg:pl-20 lg:pr-20 lg:gap-8
             ${
               showContent
                 ? "opacity-100 translate-x-0"
@@ -80,7 +83,7 @@ const Portfolio = () => {
             }`}
           >
             {dataToDisplay.map((portfolio) => (
-              <div key={portfolio.id}>
+              <div key={portfolio.id} className="">
                 <CardPortfolio {...portfolio} />
               </div>
             ))}
@@ -88,7 +91,7 @@ const Portfolio = () => {
         </section>
       </main>
       <Footer />
-      <FloatWhatsapp/>
+      <FloatWhatsapp />
     </div>
   );
 };

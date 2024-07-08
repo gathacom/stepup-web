@@ -10,11 +10,11 @@ const TeamCard = (props) => {
   };
 
   return (
-    <div className=" w-[160px] h-[221px] border border-[#bfc5d1] rounded-2xl mt-3 lg:w-[328px] lg:h-[452px]">
+    <div className=" w-[160px] h-[221px] border border-[#bfc5d1] rounded-[10px] mt-3 lg:w-[328px] lg:h-[452px]">
       <img
         src={image}
         alt={`${name} Photo`}
-        className="w-full h-[122px] object-cover lg:h-[261px] rounded-t-2xl"
+        className="w-full h-[122px] object-cover lg:h-[261px] rounded-t-[10px]"
       />
       <div className="flex flex-col items-center justify-center text-center px-4 py-3">
         <div className="min-h-8 lg:px-12 lg:py-4">

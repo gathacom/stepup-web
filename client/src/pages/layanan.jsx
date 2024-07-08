@@ -35,32 +35,34 @@ const Layanan = () => {
   return (
     <div className="relative ">
       <NavBar user={user} />
-      <section className="mt-[62px] pt-14 pb-8 bg-head-tr-to-bl-20 px-4">
-        <SectionHead
-          classname="md:text-start md:text-3xl"
-          content={[
-            { title: "Solusi ", classname: "text-primary" },
-            {
-              title: "Digital Yang  ",
-              classname: "",
-            },
-            { title: "Terbaik ", classname: "text-primary" },
-            {
-              title: "Untuk Anda.",
-              classname: "",
-            },
-          ]}
-        />
+      <section className="mt-[62px] pt-14 pb-8 bg-head-tr-to-bl-20 px-4  md:pt-20 md:pb-10 ">
+        <div className="md:px-44 md:leading-[40px] lg:px-[460px] lg:leading-[55px]">
+          <SectionHead
+            classname="md:text-start md:text-3xl"
+            content={[
+              { title: "Solusi ", classname: "text-primary" },
+              {
+                title: "Digital Yang  ",
+                classname: "",
+              },
+              { title: "Terbaik ", classname: "text-primary" },
+              {
+                title: "Untuk Anda.",
+                classname: "",
+              },
+            ]}
+          />
+        </div>
         <p
           className="mt-[20px] w-full text-xs font-body leading-4 text-black px-[12px] text-center
-        md:mb-[60px] lg:text-lg"
+        md:mb-[60px] md:text-base md:px-20 md:mt-[28px]   lg:text-xl lg:px-[320px] lg:mt-[32px]"
         >
           Hadirkan solusi digital untuk mendukung efisiensi dan produktivitas
           bisnis. Sambut era digital bersama inovasi kami
         </p>
       </section>
       {/* memanggil object services */}
-      <div className="flex flex-col md:col-span-2 lg:flex-row md:gap-14 md:ps-32 md:w-11/12 md:items-center md:justify-center items-center mt-2">
+      <div className="flex flex-col md:w-full md:col-span-2 md:flex-row md:gap-14 md:px-10 md:items-center md:justify-center items-center mt-2 ">
         {services.map((service) => (
           <CardLayanan key={service.title} {...service}></CardLayanan>
         ))}
