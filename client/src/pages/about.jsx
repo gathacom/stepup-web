@@ -29,7 +29,7 @@ const About = () => {
         <main className="font-body md:relative">
           <section className="mt-[61px] bg-head-tr-to-bl-20 md:mb-10 ">
             <div className="bg-head-tl-to-br-10 via-transparent md:bg-transparent md:py-4 lg:py-10 ">
-              <div className="pt-[61px] md:px-[200px] lg:px-[450px]">
+              <div className="pt-[61px] md:px-[200px] lg:px-[450px] phone390:px-[40px]">
                 <SectionHead
                   classname="md:text-start md:text-3xl"
                   content={[
@@ -70,7 +70,7 @@ const About = () => {
             </div>
           </section>
           <article className="md:mb-10">
-            <div className="md:px-36 md:leading-10 lg:px-[450px] lg:leading-[40px]">
+            <div className="md:px-36 md:leading-10 lg:px-[450px] lg:leading-[40px] phone390:px-[40px]">
               <SectionHead
                 classname="md:text-start md:text-3xl"
                 content={[
@@ -98,7 +98,7 @@ const About = () => {
               </div>
               <div
                 className="text-sm text-black/80 font-normal px-6 mt-[4px] md:text-[16px] md:leading-5 md:text-center md:px-12 lg:w-[50%] 
-              lg:text-left lg:px-0 lg:text-xl lg:pt-6 lg:pe-36 "
+              lg:text-left lg:px-0 lg:text-xl lg:pt-6 lg:pe-36"
               >
                 <p>
                   Step Up Project adalah sebuah komunitas yang bergerak untuk
@@ -109,9 +109,9 @@ const About = () => {
                   konten digital kami.
                 </p>
                 <p className="mt-4">
-                  Semua itu kami capai dengan menggunakan teknologi dan proses
-                  terbaik seuai dengan perkembangan dunia IT. Hal ini memastikan
-                  layanan yang kami berikan adalah solusi terbaik untuk anda.
+                  Semua itu kami capai dengan teknologi dan proses terbaik seuai
+                  dengan perkembangan dunia IT. Hal ini memastikan layanan yang
+                  kami berikan adalah solusi terbaik untuk anda.
                 </p>
               </div>
             </section>
@@ -134,7 +134,7 @@ const About = () => {
                   },
                 ]}
               />
-              <div className="lg:w-full lg:flex lg:justify-center ">
+              <div className="lg:w-full lg:flex lg:justify-center phone390:pe-[20px] phone425:pe-[50px] phone425:ps-[5px]">
                 <div className="mt-[30px] md:px-10  lg:w-full ">
                   {values.map((value, index) => (
                     <div key={index} className="mb-2 lg:mb-4">

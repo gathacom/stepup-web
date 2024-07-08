@@ -55,7 +55,7 @@ const Footer = () => {
       <div className="flex justify-center items-center bg-[#151411] relative h-[184px] px-8 lg:py-[120px]">
         <p
           className="text-white font-semibold text-lg text-center md:text-[24px] md:px-20 md:leading-[40px]
-        lg:text-[30px] lg:px-80 lg:leading-[50px]"
+        lg:text-[30px] lg:px-80 lg:leading-[50px] phone390:px-[20px] phone425:px-[30px]"
         >
           Transformasi digital Anda dengan pengembangan web dan edukasi IT kami.
         </p>
@@ -81,8 +81,8 @@ const Footer = () => {
             />
             <h3 className="text-xl font-bold lg:text-[30px]">Step Up</h3>
           </div>
-          <div className="w-[230px] mt-4 lg:w-[420px]">
-            <p className="text-xs text-center lg:text-left lg:text-base">
+          <div className="w-[240px] mt-4 lg:w-[420px]">
+            <p className="text-xs text-center lg:text-left lg:text-base ">
               Kami percaya pada talenta untuk menciptakan solusi digital
               unggulan. Dengan tim pengembang terampil, kami realisasikan ide
               Anda. Juga, kami tawarkan layanan edukasi IT untuk perkembangan
@@ -98,7 +98,7 @@ const Footer = () => {
                 key={item.title}
                 className="flex flex-row items-center mb-2 mt-2 gap-2 lg:gap-3"
               >
-                <div className="flex w-6 h-4 justify-center items-center bg-primary lg:w-10 lg:h-10 lg:rounded-full">
+                <div className="flex w-6 h-4 justify-center items-center lg:w-10 lg:h-10 lg:rounded-full">
                   <img src={item.image} alt={item.title} className="lg:w-10" />
                 </div>
                 <p className="text-xs text-start lg:text-base">
