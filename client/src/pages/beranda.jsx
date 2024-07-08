@@ -59,33 +59,71 @@ const Beranda = () => {
       image: "./images/partner-1.png",
     },
   ];
+  // const testimonies = [
+  //   {
+  //     id: 1,
+  //     image: "./images/testimoni/pp-1.png",
+  //     reviewer: "Al Ikhsan",
+  //     review:
+  //       "Saya sangat senang dengan jasa yang diberikan oleh StepUp Project, proses penggunaannya sangat mudah dan cepat. Selamat kerja dan terus membantu klien-klien yang membutuhkan bantuan.",
+  //     longReview:
+  //       "StepUp Project sudah membantu saya dan keluarga dalam berbagai kebutuhan, dari konsultasi bisnis, hingga konsultasi teknis. Proses yang dilakukannya sangat mudah dan cepat. Saya sangat puas dengan layanan yang diberikan dan akan selalu menggunakan jasa StepUp Project.",
+  //   },
+  //   {
+  //     id: 2,
+  //     image: "./images/testimoni/pp-2.png",
+  //     reviewer: "Ikhlas",
+  //     review:
+  //       "Layanan StepUp Project sangat membantu saya dalam konsultasi bisnis, jasa yang diberikan sangat bagus dan sesuai dengan kebutuhan.",
+  //     longReview:
+  //       "Saya sangat puas dengan layanan yang diberikan oleh StepUp Project, proses penggunaannya sangat mudah dan cepat. Jasa yang diberikan sangat sesuai dengan kebutuhan dan kami sangat senang dengan pelayanan yang diberikan. Kami akan terus menggunakan jasa StepUp Project.",
+  //   },
+  //   {
+  //     id: 3,
+  //     image: "./images/testimoni/pp-3.png",
+  //     reviewer: "Yoga",
+  //     review:
+  //       "Layanan StepUp Project sangat membantu saya dalam konsultasi teknis, jasa yang diberikan sangat bagus dan sesuai dengan kebutuhan.",
+  //     longReview:
+  //       "Saya sangat puas dengan layanan yang diberikan oleh StepUp Project, proses penggunaannya sangat mudah dan cepat. Jasa yang diberikan sangat sesuai dengan kebutuhan dan kami sangat senang dengan pelayanan yang diberikan. Kami akan terus menggunakan jasa StepUp Project.",
+  //   },
+  // ];
+
   const testimonies = [
     {
       id: 1,
-      image: "./images/testimoni/pp-1.png",
-      reviewer: "Al Ikhsan",
+      image: "./images/testimoni/testimoni-1.jpg",
+      reviewer: "Rio Rivaldo Sinuhaji",
       review:
-        "Saya sangat senang dengan jasa yang diberikan oleh StepUp Project, proses penggunaannya sangat mudah dan cepat. Selamat kerja dan terus membantu klien-klien yang membutuhkan bantuan.",
-      longReview:
-        "StepUp Project sudah membantu saya dan keluarga dalam berbagai kebutuhan, dari konsultasi bisnis, hingga konsultasi teknis. Proses yang dilakukannya sangat mudah dan cepat. Saya sangat puas dengan layanan yang diberikan dan akan selalu menggunakan jasa StepUp Project.",
+        "Salah satu hal yang saya dapatkan setelah Mini Course ini adalah menambah pengetahuan tentang desain UI/UX yang sebelumnya saya tidak tahu. Semoga Step Up terus membagi ilmu seperti ini",
     },
     {
       id: 2,
-      image: "./images/testimoni/pp-2.png",
-      reviewer: "Ikhlas",
+      image: "./images/testimoni/testimoni-2.png",
+      reviewer: "Bayu Prasetya Wijaya",
       review:
-        "Layanan StepUp Project sangat membantu saya dalam konsultasi bisnis, jasa yang diberikan sangat bagus dan sesuai dengan kebutuhan.",
-      longReview:
-        "Saya sangat puas dengan layanan yang diberikan oleh StepUp Project, proses penggunaannya sangat mudah dan cepat. Jasa yang diberikan sangat sesuai dengan kebutuhan dan kami sangat senang dengan pelayanan yang diberikan. Kami akan terus menggunakan jasa StepUp Project.",
+        "Adanya Mini Course : UI/UX For Beginner membuat saya bisa tahu dan belajar skill baru dalam desain aplikasi. Harapan saya, semoga Step Up melanjutkan untuk terus berbagi ilmu",
     },
     {
       id: 3,
-      image: "./images/testimoni/pp-3.png",
-      reviewer: "Yoga",
+      image: "./images/testimoni/dummy-profile.png",
+      reviewer: "Alfat Rahman",
       review:
-        "Layanan StepUp Project sangat membantu saya dalam konsultasi teknis, jasa yang diberikan sangat bagus dan sesuai dengan kebutuhan.",
-      longReview:
-        "Saya sangat puas dengan layanan yang diberikan oleh StepUp Project, proses penggunaannya sangat mudah dan cepat. Jasa yang diberikan sangat sesuai dengan kebutuhan dan kami sangat senang dengan pelayanan yang diberikan. Kami akan terus menggunakan jasa StepUp Project.",
+        "Kegiatan Mini Course ini sangat seru. Berbagi ilmunya tetaplah dilanjutkan",
+    },
+    {
+      id: 4,
+      image: "./images/testimoni/dummy-profile.png",
+      reviewer: "Annas Sovianto",
+      review:
+        "Pengalaman saya setelah mengikuti Mini Course : UI/UX For Beginner ini adalah menambah wawasan, upgrade skill, upgrade relasi serta menumbuhkan potensi. Semoga berbagi ilmunya tidak pernah berhenti",
+    },
+    {
+      id: 5,
+      image: "./images/testimoni/dummy-profile.png",
+      reviewer: "Dea Reigina",
+      review:
+        "Mini Course ini membuat saya jadi tahu tools Figma yang sebelumnya saya belum tahu",
     },
   ];
 
@@ -266,11 +304,11 @@ const Portfolio = (props) => {
     <div className="flex flex-col mt-5">
       <div className="relative">
         <img src={image} alt="mockup" className="" />
-        <img
+        {/* <img
           src={image2}
           alt="mockup"
           className="w-[100px] h-[100px] absolute bottom-5 right-9"
-        />
+        /> */}
       </div>
       <h2 className="text-xs font-semibold text-slate-400 mt-1">{desc}</h2>
       <h1 className="text-base font-semibold">{title}</h1>
@@ -289,7 +327,7 @@ const ReviewCard = ({ image, reviewer, review, longReview }) => {
           <img
             src={image}
             alt=""
-            className="h-[39px] w-[39px] md:h-40 md:w-40"
+            className="h-[39px] w-[39px] rounded-full md:h-40 md:w-40"
           />
           <p className="text-sm md:text-2xl font-bold">{reviewer}</p>
         </div>
