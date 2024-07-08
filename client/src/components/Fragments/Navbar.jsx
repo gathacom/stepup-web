@@ -155,7 +155,7 @@ const WideContent = ({ user, handleLogout }) => {
                       to={menu.link}
                       className={`${
                         location.pathname === menu.link
-                          ? "text-dark border-b-[3px] border-primary"
+                          ? "text-primary"
                           : "text-dark bg-white"
                       } transition cursor-pointer`}
                     >
@@ -175,7 +175,7 @@ const WideContent = ({ user, handleLogout }) => {
                     to={menu.link}
                     className={`${
                       location.pathname === menu.link
-                        ? "text-dark border-b-[3px] border-primary"
+                        ? "text-primary"
                         : "text-dark bg-white"
                     } transition cursor-pointer`}
                   >
