@@ -70,7 +70,7 @@ const Footer = () => {
           className="absolute bottom-0 h-16 w-full md:hidden"
         />
       </div>
-      <section className="px-6 py-2 mb-2  bg-light md:flex md:justify-between md:py-[50px] md:px-28  lg:px-40 lg:pt-[60px] lg:pb-[100px] border border-yellow-500">
+      <section className="px-6 py-2 mb-2  bg-light md:flex md:justify-between md:py-[50px] md:px-28  lg:px-40 lg:pt-[60px] lg:pb-[100px]">
         {/* Bagian logo ddan button konsultasi */}
         <div className="flex flex-col justify-center items-center lg:flex-row lg:justify-between  lg:pe-24 lg:items-start lg:w-full ">
           <div className="flex flex-row items-center gap-3 mt-6 lg:mt-0">
