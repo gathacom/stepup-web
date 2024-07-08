@@ -9,6 +9,7 @@ export default {
       },
       screens: {
         sm: "360px",
+        phone375:"375px",
         md: "768px",
         lg: "1280px",
       },

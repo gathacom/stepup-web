@@ -10,6 +10,7 @@ import "aos/dist/aos.css";
 import PropTypes from "prop-types";
 import useVerifyUser from "../hooks/useVerifyUser";
 import FloatWhatsapp from "../components/Fragments/FloatWhatsapp";
+import { Link } from "react-router-dom";
 
 AOS.init();
 
@@ -94,27 +95,31 @@ const Beranda = () => {
       <section className="h-auto md">
         <div className="relative md:flex md:flex-row md:ps-16 lg:ps-32 md:h-screen">
           <div className=" relative flex flex-col items-center pt-16 px-9 md:pt-32 w-full h-[503px] bg-gradient-to-t from-[#FFEDC6]">
-            <SectionHead
-              classname="md:text-start md:text-3xl"
-              content={[
-                {
-                  title: "Solusi dan Edukasi IT Terdepan Bersama ",
-                  classname: "",
-                },
-                { title: "Step Up.", classname: "text-primary" },
-              ]}
-            />
+            <div className="px-[10px]">
+              <SectionHead
+                classname="md:text-start md:text-3xl"
+                content={[
+                  {
+                    title: "Solusi dan Edukasi IT Terdepan Bersama ",
+                    classname: "",
+                  },
+                  { title: "Step Up.", classname: "text-primary" },
+                ]}
+              />
+            </div>
             <p className="mt-6 w-[311px] md:w-10/12 text-sm text-center px-4">
               Step Up Project hadir sebagai digitalisasi bisnis dan organisasi
               dengan pengembangan dan pengelolaan website. Kami juga hadir
               sebagai pionir terdepan edukasi seputar dunia IT.
             </p>
-            <button className="flex flex-row justify-center gap-4 items-center w-[190px] h-[50px] text-sm font-normal mt-8 text-white bg-primary rounded-full">
-              Konsultasi{" "}
-              <span className="p-1 rounded-full bg-slate-200/50">
-                <FaArrowRight />
-              </span>
-            </button>
+            <Link to="/konsultasi">
+              <button className="flex flex-row justify-center gap-4 items-center w-[190px] h-[50px] text-sm font-normal mt-8 text-white bg-primary rounded-full">
+                Konsultasi{" "}
+                <span className="p-1 rounded-full bg-slate-200/50">
+                  <FaArrowRight />
+                </span>
+              </button>
+            </Link>
             <div className="absolute px-6 -bottom-24">
               <img src="./images/mockup-beranda.png" alt="" />
             </div>
@@ -157,12 +162,14 @@ const Beranda = () => {
                 },
               ]}
             />
-            <button className="flex flex-row justify-center gap-4 items-center w-[190px] h-[50px] text-sm font-normal mt-8 text-white bg-primary rounded-full">
-              Selengkapnya{" "}
-              <span className="p-1 rounded-full bg-slate-200/50">
-                <FaArrowRight />
-              </span>
-            </button>
+            <Link to="/portfolio">
+              <button className="flex flex-row justify-center gap-4 items-center w-[190px] h-[50px] text-sm font-normal mt-8 text-white bg-primary rounded-full">
+                Selengkapnya{" "}
+                <span className="p-1 rounded-full bg-slate-200/50">
+                  <FaArrowRight />
+                </span>
+              </button>
+            </Link>
           </div>
           <div className="mt-8">
             {portfolios.map((item) => (

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import NavBar from "../components/Fragments/Navbar";
 import Footer from "../components/Fragments/Footer";
 import CardPortfolio from "../components/Fragments/CardPortfolio";
@@ -22,12 +22,16 @@ const Portfolio = () => {
 
   const dataToDisplay = selectedCategory === "websites" ? websites : educations;
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="relative">
       <NavBar user={user} />
       <main className="box-border ">
         <section className="mt-[62px] pt-14 pb-8 bg-head-tr-to-bl-20 px-5 lg:pt-20 ">
-          <div className="md:px-28 lg:px-[400px]">
+          <div className="px-[4px] phone375:px-[10px] md:px-28 lg:px-[400px]">
             <SectionHead
               classname="md:text-start md:text-3xl"
               content={[
