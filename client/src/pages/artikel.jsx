@@ -50,19 +50,21 @@ const Artikel = () => {
       <Navbar user={user} />
       <section className="h-auto">
         <div className="py-14 bg-head px-6">
-          <SectionHead
-            classname="md:text-start md:text-3xl"
-            content={[
-              { title: "Temukan ", classname: "" },
-              { title: "Wawasan ", classname: "text-primary" },
-              { title: "dan ", classname: "" },
-              { title: "Informasi ", classname: "text-primary" },
-              {
-                title: "Digital Terkini. ",
-                classname: "",
-              },
-            ]}
-          />
+          <div className="px-[4px] phone375:px-[10px]">
+            <SectionHead
+              classname="md:text-start md:text-3xl"
+              content={[
+                { title: "Temukan ", classname: "" },
+                { title: "Wawasan ", classname: "text-primary" },
+                { title: "dan ", classname: "" },
+                { title: "Informasi ", classname: "text-primary" },
+                {
+                  title: "Digital Terkini. ",
+                  classname: "",
+                },
+              ]}
+            />
+          </div>
           <p className="mt-5 w-full text-xs font-body leading-4 text-dark px-[12px] text-center">
             Jelajahi dunia teknologi terkini dengan artikel kami! Perkembangan
             terbaru, kecerdasan buatan, dan solusi paling inovatif.
@@ -86,7 +88,7 @@ const Artikel = () => {
       )}
       <section className="h-auto">
         <div className="pt-8 px-6">
-        <InputWithIcon
+          <InputWithIcon
             type="text"
             icon="search"
             placeholder="Cari"
@@ -117,8 +119,7 @@ const Artikel = () => {
       </h2> */}
 
       <Footer />
-      <FloatWhatsapp/>
-
+      <FloatWhatsapp />
     </div>
   );
 };

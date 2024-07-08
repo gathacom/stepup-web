@@ -95,7 +95,7 @@ const Beranda = () => {
       <section className="h-auto md">
         <div className="relative md:flex md:flex-row md:ps-16 lg:ps-32 md:h-screen">
           <div className=" relative flex flex-col items-center pt-16 px-9 md:pt-32 w-full h-[503px] bg-gradient-to-t from-[#FFEDC6]">
-            <div className="px-4">
+            <div className="px-[10px]">
               <SectionHead
                 classname="md:text-start md:text-3xl"
                 content={[
