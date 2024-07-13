@@ -165,7 +165,7 @@ const Beranda = () => {
         </div>
       </section>
       <section className="h-auto">
-        <div className="w-full ps-4 md:px-4 bg-light mt-48 lg:mt-72 pb-8 lg:pb-20">
+        <div className="w-full ps-4 md:px-4 bg-light mt-48 lg:mt-96 lg:pt-20 pb-8 lg:pb-20">
           <SectionHead
             subsec={true}
             classname="md:text-start md:text-3xl"
@@ -179,7 +179,7 @@ const Beranda = () => {
               { title: "untuk Anda", classname: "" },
             ]}
           />
-          <div className="flex flex-col md:col-span-2 lg:flex-row md:gap-14 md:ps-32 md:w-11/12 md:items-center md:justify-center items-center mt-7">
+          <div className="flex flex-col md:col-span-2 lg:flex-row md:gap-14 md:ps-32 md:w-11/12 md:items-center md:justify-center items-center mt-7 lg:mt-12">
             {services.map((service) => (
               <CardLayanan key={service.title} {...service}></CardLayanan>
             ))}
@@ -228,7 +228,7 @@ const Beranda = () => {
               },
             ]}
           />
-          <div className="w-full flex justify-center items-center mt-8 gap-4 overflow-x-scroll">
+          <div className="w-full flex justify-center items-center mt-8 gap-4 overflow-x-scroll no-scrollbar">
             {customers.map((item) => (
               <div key={item.id} className="md:h-[152px]">
                 <img src={item.image} alt="" className="w-full h-full"/>
@@ -248,7 +248,7 @@ const Beranda = () => {
               },
             ]}
           />
-          <div className="flex flex-row  w-[320px] md:w-[700px] lg:w-[1172px] md:h-[385px] gap-4 md:gap-8 lg:gap-12 overflow-x-scroll mt-9">
+          <div className="flex flex-row  w-[320px] md:w-[700px] lg:w-[1172px] md:h-[385px] gap-4 md:gap-8 lg:gap-12 overflow-x-scroll no-scrollbar mt-9">
             {testimonies.map((item) => (
               <ReviewCard key={item.id} {...item}></ReviewCard>
             ))}
