@@ -9,8 +9,8 @@ const SectionHead = (props) => {
         <span
           key={index}
           className={`${item.classname} ${
-            subsec ? "text-lg" : "text-2xl"
-          } md:text-[32px] lg:text-[40px]`}
+            subsec ? "text-lg md:text-[32px]" : "text-2xl md:text-[32px] lg:text-[58px]"
+          }`}
         >
           {item.title}
         </span>

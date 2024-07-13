@@ -55,7 +55,7 @@ const Layanan = () => {
         </div>
         <p
           className="mt-[20px] w-full text-xs font-body leading-4 text-black px-[12px] text-center
-        md:mb-[60px] md:text-base md:px-20 md:mt-[28px]   lg:text-xl lg:px-[320px] lg:mt-[32px]"
+        md:mb-[60px] md:text-base md:px-20 md:mt-[28px] lg:text-xl lg:px-[320px] lg:mt-[32px]"
         >
           Hadirkan solusi digital untuk mendukung efisiensi dan produktivitas
           bisnis. Sambut era digital bersama inovasi kami

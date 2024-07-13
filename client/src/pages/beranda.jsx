@@ -131,11 +131,11 @@ const Beranda = () => {
     <div className="pt-16">
       <NavBar user={user} />
       <section className="h-auto md">
-        <div className="relative md:flex md:flex-row md:ps-16 lg:ps-32 md:h-screen">
-          <div className=" relative flex flex-col items-center pt-16 px-9 md:pt-32 w-full h-[503px] bg-gradient-to-t from-[#FFEDC6]">
-            <div className="px-[10px]">
+        <div className="relative md:flex md:flex-row md:h-screen">
+          <div className=" relative flex flex-col items-center pt-16 px-9 lg:px-[289px] md:pt-32 w-full h-[503px] md:h-[600px] lg:h-[700px] bg-gradient-to-t from-[#FFEDC6]">
+            <div className="px-[10px] ">
               <SectionHead
-                classname="md:text-start md:text-3xl"
+                classname="md:text-start"
                 content={[
                   {
                     title: "Solusi dan Edukasi IT Terdepan Bersama ",
@@ -145,7 +145,7 @@ const Beranda = () => {
                 ]}
               />
             </div>
-            <p className="mt-6 w-[311px] md:w-10/12 text-sm text-center px-4">
+            <p className="mt-6 w-[311px] md:w-10/12 text-sm md:text-base lg:text-xl text-center px-4">
               Step Up Project hadir sebagai digitalisasi bisnis dan organisasi
               dengan pengembangan dan pengelolaan website. Kami juga hadir
               sebagai pionir terdepan edukasi seputar dunia IT.
@@ -158,14 +158,14 @@ const Beranda = () => {
                 </span>
               </button>
             </Link>
-            <div className="absolute px-6 -bottom-24">
+            <div className="absolute px-6 -bottom-24 md:-bottom-40 lg:-bottom-44 md:h-[50%] md:px-[120px] lg:px-[260px] ">
               <img src="./images/mockup-beranda.png" alt="" />
             </div>
           </div>
         </div>
       </section>
       <section className="h-auto">
-        <div className="w-full ps-4 md:px-4 bg-light mt-48 pb-8">
+        <div className="w-full ps-4 md:px-4 bg-light mt-48 lg:mt-72 pb-8 lg:pb-20">
           <SectionHead
             subsec={true}
             classname="md:text-start md:text-3xl"
@@ -188,7 +188,7 @@ const Beranda = () => {
       </section>
       <section className="h-auto md:pb-24">
         <div className="w-full px-6 py-8 bg-gradient-to-l from-[#FFEDC6]">
-          <div className="flex flex-col md:col-span-2 lg:flex-row md:gap-14 md:ps-32 md:w-11/12 md:items-center md:justify-center items-center">
+          <div className="flex flex-col md:col-span-2 md:gap-4 md:ps-32 md:w-11/12 md:items-center md:justify-center items-center">
             <SectionHead
               subsec={true}
               classname="md:text-start md:text-3xl"
@@ -201,15 +201,15 @@ const Beranda = () => {
               ]}
             />
             <Link to="/portfolio">
-              <button className="flex flex-row justify-center gap-4 items-center w-[190px] h-[50px] text-sm font-normal mt-8 text-white bg-primary rounded-full">
+              <button className="flex flex-row justify-center gap-4 items-center w-[190px] h-[50px] md:w-[251px] md:h-[70px] text-sm md:text-xl font-normal mt-8 text-white bg-primary rounded-full">
                 Selengkapnya{" "}
                 <span className="p-1 rounded-full bg-slate-200/50">
-                  <FaArrowRight />
+                  <FaArrowRight/>
                 </span>
               </button>
             </Link>
           </div>
-          <div className="mt-8">
+          <div className="mt-8 lg:flex lg:flex-row lg:gap-28 md:ps-44 md:pe-28 lg:px-36">
             {portfolios.map((item) => (
               <Portfolio key={item.id} {...item}></Portfolio>
             ))}
@@ -217,7 +217,7 @@ const Beranda = () => {
         </div>
       </section>
       <section className="h-auto">
-        <div className="w-full px-4 py-8 bg-light">
+        <div className="w-full px-4 py-8 md:py-10 bg-light">
           <SectionHead
             subsec={true}
             content={[
@@ -230,13 +230,15 @@ const Beranda = () => {
           />
           <div className="w-full flex justify-center items-center mt-8 gap-4 overflow-x-scroll">
             {customers.map((item) => (
-              <img key={item.id} src={item.image} alt="" />
+              <div key={item.id} className="md:h-[152px]">
+                <img src={item.image} alt="" className="w-full h-full"/>
+              </div>
             ))}
           </div>
         </div>
       </section>
       <section className="h-auto">
-        <div className="w-full ps-6 pb-9 bg-light">
+        <div className="w-full ps-6 pb-9 bg-light flex items-center justify-start flex-col">
           <SectionHead
             subsec={true}
             content={[
@@ -246,7 +248,7 @@ const Beranda = () => {
               },
             ]}
           />
-          <div className="flex flex-row w-[320px] items-center justify-start gap-4 overflow-x-scroll mt-9">
+          <div className="flex flex-row  w-[320px] md:w-[700px] lg:w-[1172px] md:h-[385px] gap-4 md:gap-8 lg:gap-12 overflow-x-scroll mt-9">
             {testimonies.map((item) => (
               <ReviewCard key={item.id} {...item}></ReviewCard>
             ))}
@@ -284,16 +286,16 @@ const CardLayanan = (props) => {
 
   return (
     <div
-      className={`flex justify-center items-center w-[312px] h-[205px] mt-16`}
+      className={`flex justify-center items-center w-[312px] h-[205px] md:w-[450px] md:h-[260px] lg:w-[500px] lg:h-[333px] mt-16`}
     >
-      <div className="flex flex-col items-center h-full w-full px-5 pt-12 rounded-2xl mb-8 border-[1px] border-slate-300 relative">
+      <div className="flex flex-col items-center h-full w-full px-5 pt-12 lg:pt-[70px] lg:px-8 rounded-2xl mb-8 border-[1px] border-slate-300 relative">
         <img
           src={images}
           alt={title}
-          className="w-[66px] h-[66px] mb-3 absolute left-[50%] -top-8 translate-x-[-50%]"
+          className="w-[66px] h-[66px] md:w-[78px] md:h-[78px] lg:w-[91px] lg:h-[91px] mb-3 absolute left-[50%] -top-8 md:-top-10 lg:-top-12 translate-x-[-50%]"
         />
-        <h3 className="text-lg font-bold mb-3">{title}</h3>
-        <p className="text-sm text-center">{value}</p>
+        <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-3">{title}</h3>
+        <p className="text-sm md:text-lg lg:text-xl text-center">{value}</p>
       </div>
     </div>
   );
@@ -304,32 +306,27 @@ const Portfolio = (props) => {
     <div className="flex flex-col mt-5">
       <div className="relative">
         <img src={image} alt="mockup" className="" />
-        {/* <img
-          src={image2}
-          alt="mockup"
-          className="w-[100px] h-[100px] absolute bottom-5 right-9"
-        /> */}
       </div>
-      <h2 className="text-xs font-semibold text-slate-400 mt-1">{desc}</h2>
-      <h1 className="text-base font-semibold">{title}</h1>
+      <h2 className="text-xs md:text-xl font-semibold text-slate-400 mt-1">{desc}</h2>
+      <h1 className="text-base md:text-2xl font-semibold">{title}</h1>
     </div>
   );
 };
 const ReviewCard = ({ image, reviewer, review, longReview }) => {
   return (
-    <div className="bg-white min-w-[233px] h-[264px] rounded-2xl border-2 border-slate-300">
+    <div className="bg-white min-w-[233px] h-[264px] md:min-w-[332px] lg:min-w-[332px] md:h-[380px] lg:h-[345px] rounded-2xl border-2 border-slate-300">
       <div className="flex flex-col px-5 pt-5">
         <img src="./images/quotation.png" alt="" className="h-4 w-4" />
-        <p className="h-[122px] md:h-[50%] pe-1 md:pe-5 text-xs md:text-lg text-dark mb-3 overflow-y-hidden mt-4 text-justify">
+        <p className="h-[122px] md:h-[220px] lg:h-[180px] pe-1 md:pe-5 text-xs md:text-base text-dark mb-3 overflow-y-hidden mt-4 text-justify">
           {review}
         </p>
         <div className="flex items-center gap-2 mt-4 ">
           <img
             src={image}
             alt=""
-            className="h-[39px] w-[39px] rounded-full md:h-40 md:w-40"
+            className="h-[39px] w-[39px] rounded-full md:h-[63px] md:w-[63px]"
           />
-          <p className="text-sm md:text-2xl font-bold">{reviewer}</p>
+          <p className="text-sm md:text-xl font-semibold">{reviewer}</p>
         </div>
       </div>
     </div>

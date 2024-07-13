@@ -16,24 +16,12 @@ import {
 import SectionHead from "../components/Elements/SectionHead";
 import InputWithIcon from "../components/Elements/Input/InputWithIcon";
 import FloatWhatsapp from "../components/Fragments/FloatWhatsapp";
+import articles from "../utils/article"
 
 const Artikel = () => {
-  const [articles, setArticles] = useState([]);
-  const [ids, setIds] = useState([]);
   const [cookies, setCookie, removeCookie] = useCookies([]);
   const [latestArticle, setLatestArticle] = useState([]);
   const user = useVerifyUser();
-
-  useEffect(() => {
-    getArticles((res) => {
-      if (res) {
-        setArticles(res.articles);
-        setIds(res.articles.map((article) => article._id));
-      } else {
-        console.log(res);
-      }
-    });
-  }, [articles]);
 
   useEffect(() => {
     getLatestArticle((res) => {
@@ -49,8 +37,8 @@ const Artikel = () => {
     <div className="pt-16">
       <Navbar user={user} />
       <section className="h-auto">
-        <div className="py-14 bg-head px-6">
-          <div className="px-[4px] phone375:px-[10px]">
+        <div className="py-14 lg:pt-32 bg-head px-6">
+          <div className="px-[4px] phone375:px-[10px] md:px-44">
             <SectionHead
               classname="md:text-start md:text-3xl"
               content={[
@@ -65,7 +53,7 @@ const Artikel = () => {
               ]}
             />
           </div>
-          <p className="mt-5 w-full text-xs font-body leading-4 text-dark px-[12px] text-center">
+          <p className="mt-5 w-full text-xs md:text-lg lg:text-xl font-body leading-4 text-dark px-[12px] md:px-24 lg:px-44 text-center">
             Jelajahi dunia teknologi terkini dengan artikel kami! Perkembangan
             terbaru, kecerdasan buatan, dan solusi paling inovatif.
           </p>
@@ -87,7 +75,7 @@ const Artikel = () => {
         <></>
       )}
       <section className="h-auto">
-        <div className="pt-8 px-6">
+        <div className="pt-8 px-6 lg:px-24">
           <InputWithIcon
             type="text"
             icon="search"
@@ -95,28 +83,13 @@ const Artikel = () => {
             name="article"
             id="article"
           />
-          <div className="md:grid md:grid-cols-3 md:gap-4">
+          <div className="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4">
             {articles.map((article, index) => (
-              <CardArtikel key={ids[index]} id={ids[index]} {...article} />
+              <CardArtikel key={article.ids} id={article.ids} {...article} />
             ))}
           </div>
         </div>
       </section>
-
-      {/* <img src={`${image}`} alt="" /> */}
-      {/* <h2 className="mt-[30px] px-[12px] font-bold text-xl text-center">
-        Postingan Terbaru
-      </h2> */}
-      {/* <LatestCardArticle /> */}
-      {/* <div className="w-full">
-        {latestArticle.map((article, index) => (
-          <LatestCardArticle key={ids} id={ids[index]} {...article} />
-        ))}
-      </div> */}
-      {/* memanggil object semua artikel */}
-      {/* <h2 className="mt-[30px] px-[12px] font-bold text-xl text-center ">
-        Postingan Lainnya
-      </h2> */}
 
       <Footer />
       <FloatWhatsapp />

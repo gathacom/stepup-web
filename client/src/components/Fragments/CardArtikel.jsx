@@ -6,7 +6,7 @@ import { useCookies } from "react-cookie";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { DateConverter } from "../Elements/DateConverter";
-const CardArtikel = ({ id, image, title, author, content, published_at }) => {
+const CardArtikel = ({ id, image, title, author, content, published_at, to }) => {
   const [cookies, setCookie, removeCookie] = useCookies([]);
   const [user, setUser] = useState("");
 
@@ -37,10 +37,11 @@ const CardArtikel = ({ id, image, title, author, content, published_at }) => {
       }
     });
   };
+  
   return (
     <div className="block max-w-[300px] md:max-w-[409px] mx-auto mt-[43px] rounded-xl font-body overflow-hidden shadow-lg box-border">
       <img
-        src={`http://localhost:8080/article/${image}`}
+        src={image}
         alt="Cards"
         className="w-full h-[254px] object-fit"
       />
@@ -49,13 +50,12 @@ const CardArtikel = ({ id, image, title, author, content, published_at }) => {
           <DateConverter date={published_at} />
           <h2 className="text-xs ">, By {author ? author : "Step-Up"}</h2>
         </div>
-        <Link to={`/article/${id}`}>
-          <h1 className="text-[16px] font-bold text-left my-[11px]">{title}</h1>
-        </Link>
+          <h3 className="text-base font-bold text-left my-[11px]">{title}</h3>
+        
         <div className="word-wrap my-4 text-left text-xs ">
-          {HTMLReactParser(content.slice(0, 200) + "...")}
+          {content}
         </div>
-        <Link to={`https://stepup-project.vercel.app`} target="blank">
+        <Link to={to} target="blank">
         <div className="flex flex-row items-center mt-5">
           <p className="text-primary">Selengkapnya </p>
           <IoIosArrowRoundForward color="#FFB10A" size="30px"/>
