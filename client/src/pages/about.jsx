@@ -29,7 +29,7 @@ const About = () => {
         <main className="font-body md:relative">
           <section className="mt-[61px] bg-head-tr-to-bl-20 md:mb-10 ">
             <div className="bg-head-tl-to-br-10 via-transparent md:bg-transparent md:py-4 lg:py-10 ">
-              <div className="pt-[61px] md:px-[200px] lg:px-[450px] phone390:px-[40px]">
+              <div className="pt-[61px] md:px-[200px] lg:px-[350px] phone390:px-[40px]">
                 <SectionHead
                   classname="md:text-start md:text-3xl"
                   content={[
@@ -77,17 +77,17 @@ const About = () => {
                   {
                     title: "Misi Kami adalah Mendukung ",
                     classname:
-                      "font-semibold text-lg md:text-[24px] lg:text-[28px]",
+                      "font-semibold text-lg md:text-[24px] lg:text-[26px]",
                   },
                   {
                     title: "Kemajuan Digital ",
                     classname:
-                      "text-primary font-semibold text-lg md:text-[24px] lg:text-[28px]",
+                      "text-primary font-semibold text-lg md:text-[24px] lg:text-[26px]",
                   },
                   {
                     title: "Anda.",
                     classname:
-                      "font-semibold text-lg md:text-[24px] lg:text-[28px]",
+                      "font-semibold text-lg md:text-[24px] lg:text-[26px]",
                   },
                 ]}
               />
@@ -125,12 +125,12 @@ const About = () => {
                   {
                     title: "Nilai ",
                     classname:
-                      "text-primary font-semibold text-lg md:text-[24px] lg:text-[28px] ",
+                      "text-primary font-semibold text-lg md:text-[24px] lg:text-[26px] ",
                   },
                   {
                     title: "Yang Kami Terapkan",
                     classname:
-                      "font-semibold text-lg md:text-[24px] lg:text-[28px]",
+                      "font-semibold text-lg md:text-[24px] lg:text-[26px]",
                   },
                 ]}
               />
@@ -162,12 +162,12 @@ const About = () => {
                   {
                     title: "Tim ",
                     classname:
-                      "text-primary font-semibold text-lg md:text-[24px] lg:text-[28px] ",
+                      "text-primary font-semibold text-lg md:text-[24px] lg:text-[26px] ",
                   },
                   {
                     title: "Kami yang Luar Biasa",
                     classname:
-                      "font-semibold text-lg md:text-[24px] lg:text-[28px] ",
+                      "font-semibold text-lg md:text-[24px] lg:text-[26px] ",
                   },
                 ]}
               />
