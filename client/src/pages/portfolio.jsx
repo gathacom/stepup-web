@@ -31,7 +31,7 @@ const Portfolio = () => {
       <NavBar user={user} />
       <main className="box-border">
         <section className="mt-[62px] pt-14 pb-8 bg-head-tr-to-bl-20 px-5 lg:pt-20">
-          <div className="px-[4px] phone375:px-[10px] md:px-28 lg:px-[400px] phone390:px-[20px] phone425:px-[35px]">
+          <div className="px-[4px] phone375:px-[10px] md:px-28 lg:px-[300px] phone390:px-[20px] phone425:px-[35px]">
             <SectionHead
               classname="md:text-start md:text-3xl"
               content={[

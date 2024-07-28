@@ -36,7 +36,7 @@ const Layanan = () => {
     <div className="relative ">
       <NavBar user={user} />
       <section className="mt-[62px] pt-14 pb-8 bg-head-tr-to-bl-20 px-4  md:pt-20 md:pb-10 ">
-        <div className="sm:px-[10px] md:px-44 md:leading-[40px] lg:px-[460px] lg:leading-[55px] phone390:px-[40px]">
+        <div className="sm:px-[10px] md:px-44 md:leading-[40px] lg:px-[360px] lg:leading-[55px] phone390:px-[40px]">
           <SectionHead
             classname="md:text-start md:text-3xl"
             content={[
