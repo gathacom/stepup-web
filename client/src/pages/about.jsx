@@ -70,24 +70,24 @@ const About = () => {
             </div>
           </section>
           <article className="md:mb-10">
-            <div className="md:px-36 md:leading-10 lg:px-[450px] lg:leading-[40px] phone390:px-[40px]">
+            <div className="md:px-36 md:leading-10 lg:px-[520px] lg:leading-[40px] phone390:px-[40px]">
               <SectionHead
                 classname="md:text-start md:text-3xl"
                 content={[
                   {
                     title: "Misi Kami adalah Mendukung ",
                     classname:
-                      "font-semibold text-lg md:text-[24px] lg:text-[26px]",
+                      "font-semibold text-lg md:text-[24px] lg:text-[25px]",
                   },
                   {
                     title: "Kemajuan Digital ",
                     classname:
-                      "text-primary font-semibold text-lg md:text-[24px] lg:text-[26px]",
+                      "text-primary font-semibold text-lg md:text-[24px] lg:text-[25px]",
                   },
                   {
                     title: "Anda.",
                     classname:
-                      "font-semibold text-lg md:text-[24px] lg:text-[26px]",
+                      "font-semibold text-lg md:text-[24px] lg:text-[25px]",
                   },
                 ]}
               />
@@ -125,12 +125,12 @@ const About = () => {
                   {
                     title: "Nilai ",
                     classname:
-                      "text-primary font-semibold text-lg md:text-[24px] lg:text-[26px] ",
+                      "text-primary font-semibold text-lg md:text-[24px] lg:text-[25px] ",
                   },
                   {
                     title: "Yang Kami Terapkan",
                     classname:
-                      "font-semibold text-lg md:text-[24px] lg:text-[26px]",
+                      "font-semibold text-lg md:text-[24px] lg:text-[25px]",
                   },
                 ]}
               />
