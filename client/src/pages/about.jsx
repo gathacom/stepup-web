@@ -72,22 +72,16 @@ const About = () => {
           <article className="md:mb-10">
             <div className="md:px-36 md:leading-10 lg:px-[520px] lg:leading-[40px] phone390:px-[40px]">
               <SectionHead
-                classname="md:text-start md:text-3xl"
+                subsec={true}
                 content={[
                   {
                     title: "Misi Kami adalah Mendukung ",
-                    classname:
-                      "font-semibold text-lg md:text-[24px] lg:text-[25px]",
+                    classname: "",
                   },
+                  { title: "Kemajuan Digital ", classname: "text-primary" },
                   {
-                    title: "Kemajuan Digital ",
-                    classname:
-                      "text-primary font-semibold text-lg md:text-[24px] lg:text-[25px]",
-                  },
-                  {
-                    title: "Anda.",
-                    classname:
-                      "font-semibold text-lg md:text-[24px] lg:text-[25px]",
+                    title: "Anda",
+                    classname: "",
                   },
                 ]}
               />
@@ -120,17 +114,12 @@ const About = () => {
             <div className="absolute z-10 w-full h-[200px] bg-head-tl-to-br-30 "></div>
             <section className="absolute z-20 pt-8 pb-10 w-full ps-5 pe-10 lg:pt-0  lg:pb-0 md:py-10 lg:mt-10 lg:px-20  ">
               <SectionHead
-                classname="md:text-start md:text-3xl"
+                subsec={true}
                 content={[
-                  {
-                    title: "Nilai ",
-                    classname:
-                      "text-primary font-semibold text-lg md:text-[24px] lg:text-[25px] ",
-                  },
+                  { title: "Nilai ", classname: "text-primary" },
                   {
                     title: "Yang Kami Terapkan",
-                    classname:
-                      "font-semibold text-lg md:text-[24px] lg:text-[25px]",
+                    classname: "",
                   },
                 ]}
               />
@@ -159,15 +148,10 @@ const About = () => {
               <SectionHead
                 subsec={true}
                 content={[
-                  {
-                    title: "Tim ",
-                    classname:
-                      "text-primary font-semibold text-lg md:text-[24px] lg:text-[26px] ",
-                  },
+                  { title: "Tim ", classname: "text-primary" },
                   {
                     title: "Kami yang Luar Biasa",
-                    classname:
-                      "font-semibold text-lg md:text-[24px] lg:text-[26px] ",
+                    classname: "",
                   },
                 ]}
               />
